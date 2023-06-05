@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_05_132230) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_05_153042) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "letters", force: :cascade do |t|
+    t.string "content"
+    t.string "subject"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "received_id"
+    t.index ["received_id"], name: "index_letters_on_received_id"
+    t.index ["user_id"], name: "index_letters_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +33,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_132230) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "full_name"
+    t.datetime "received_day", default: "2023-06-20 00:00:00"
+    t.string "user_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "letters", "users"
+  add_foreign_key "letters", "users", column: "received_id"
 end
