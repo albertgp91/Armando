@@ -2,7 +2,7 @@ class LettersController < ApplicationController
   before_action :set_letter, only: %i[show destroy]
 
   def index
-    @letters.all
+    @letters = Letter.all
   end
 
   def create

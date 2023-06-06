@@ -8,11 +8,11 @@
   </div>
   <div class="container">
     <div class="row">
-      <% @letter.each do |letter| %>
+      <% @letters.each do |letter| %>
       <div class="col-12 mb-4">
         <%= link_to letter_path(letter), class: "text-decoration-none" do %>
         <div class="border p3 rounded shadow">
-          <p class="m-0"><%= letter.user_id "|" letter.subject %></p>
+          <p class="m-0"><%= letter.subject %></p>
         </div>
         <% end %>
       </div>

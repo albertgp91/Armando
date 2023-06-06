@@ -7,9 +7,8 @@
           <%= simple_form_for(@letter) do |f| %>
 
             <div class="form-inputs">
-              <%= f.input :username %>
               <%= f.input :subject %>
-              <%= "#{@user.receiver_name} will receive your letter #{user.reciving_date}" %>
+              <%= "User will receive your letter X days at Y time" %>
               <%= f.input :content %>
                             <%= f.input :photo, as: :file %>
             </div>
