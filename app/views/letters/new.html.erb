@@ -13,8 +13,8 @@
                             <%= f.input :photo, as: :file %>
             </div>
             <div class="form-actions">
-              <%= f.submit "Send Letter", class: "btn-goat mainbtn" %>
-              <%= link_to "Cancel", letters_path, class: "btn-goat goback" %>
+              <%= f.submit "Send Letter", class: "btn-main" %>
+              <%= link_to "Cancel", inbox_path, class: "btn-secondary" %>
             </div>
           <% end %>
         </div>
