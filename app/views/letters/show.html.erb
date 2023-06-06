@@ -1,0 +1,42 @@
+<div class="bg-bisque" style="min-height: 100vh">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card col-8 shadow p-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center my-4">
+                <h1 class="mb-0">A letter from <%= @letter.user_id %></h1>
+                  <div>
+                    <%= link_to letter_path(@letter), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+                        <i class="far fa-trash-alt"></i>
+                    <% end %>
+                  </div>
+            </div>
+             <hr>
+            <div class="container">
+                  <div class="d-flex">
+                    <div class="row col-lo-6">
+
+                      <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item">Subject: <%=@goat.subject %></li>
+                          <li class="list-group-item">Letter: <%= @goat.content %></li>
+                      </ul>
+                        <% if @goat.photo.present? %>
+                        <%= cl_image_tag @goat.photo.key, height: 400, crop: :fill %>
+                        <% else %>
+                        <%= image_tag "logo.png", height: 400 %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="row d-flex">
+                      <div class="card-body">
+                        <%= link_to "Select this goat", new_goat_booking_path(@goat), class: "btn-goat see_all"%>
+                        <%= link_to "Go back",goats_path, class: "btn-goat add"%>
+                      </div>
+                    </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
