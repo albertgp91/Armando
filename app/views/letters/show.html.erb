@@ -19,10 +19,10 @@
                           <li class="list-group-item">Subject: <%=@letter.subject %></li>
                           <li class="list-group-item">Letter: <%= @letter.content %></li>
                       </ul>
-                        <% if @goat.photo.present? %>
-                        <%= cl_image_tag @goat.photo.key, height: 400, crop: :fill %>
-                        <% else %>
-                        <% end %>
+                        <%# <% if @goat.photo.present? %>
+                        <%# <%= cl_image_tag @goat.photo.key, height: 400, crop: :fill %>
+                        <%# <% else %>
+                        <%# <% end %>
                       </div>
                     </div>
                   </div>
