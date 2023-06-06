@@ -19,8 +19,8 @@
                           <li class="list-group-item">Subject: <%=@letter.subject %></li>
                           <li class="list-group-item">Letter: <%= @letter.content %></li>
                       </ul>
-                        <%# <% if @goat.photo.present? %>
-                        <%# <%= cl_image_tag @goat.photo.key, height: 400, crop: :fill %>
+                        <%# <% if @letter.photo.present? %>
+                        <%# <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
                         <%# <% else %>
                         <%# <% end %>
                       </div>
@@ -28,8 +28,8 @@
                   </div>
                     <div class="row d-flex">
                       <div class="card-body">
-                        <%= link_to "Reply this Letter", new_letter_path(@letter), class: "btn-letter mainbtn"%>
-                        <%= link_to "Go back", letters_path, class: "btn-letter goback"%>
+                        <%= link_to "Reply this Letter", new_letter_path(@letter), class: "btn-main"%>
+                        <%= link_to "Go back", inbox_path, class: "btn-secondary"%>
                       </div>
                     </div>
 
