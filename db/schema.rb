@@ -20,8 +20,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_153042) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "received_id"
-    t.index ["received_id"], name: "index_letters_on_received_id"
+    t.bigint "receiver_id"
+    t.index ["receiver_id"], name: "index_letters_on_receiver_id"
     t.index ["user_id"], name: "index_letters_on_user_id"
   end
 
@@ -34,12 +34,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_153042) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "full_name"
-    t.datetime "received_day", default: "2023-06-20 00:00:00"
+    t.datetime "receiving_day", default: "2023-06-21 00:00:00"
     t.string "user_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "letters", "users"
-  add_foreign_key "letters", "users", column: "received_id"
+  add_foreign_key "letters", "users", column: "receiver_id"
 end
