@@ -1,0 +1,33 @@
+<div class="bg-bisque" style="min-height: 100vh">
+    <div class="container-fluid py-5 shadow">
+      <div class="col-md-8 text-center">
+        <h1><b>What would you like to do?<b></h1>
+      </div>
+          <div class="row justify-content-between">
+              <div class="col-md-4">
+                <%= link_to new_letter_path(@letter), class: 'text-decoration-none text-dark'%>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title">Send Letter</h5>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <%= link_to inbox_path, class: 'text-decoration-none text-dark'%>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title">Letterbox</h5>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <%= link_to sent_path, class: 'text-decoration-none text-dark'%>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <h5 class="card-title">Letters Sent</h5>
+                    </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
