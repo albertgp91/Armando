@@ -1,6 +1,5 @@
 .btn-main{
-  background-color: rgb(78, 78, 221);
-  color: white;
+  background-color: #DC143C;
   text-align: center;
   padding: 10px 20px;
   border-radius: 50px;
@@ -8,14 +7,29 @@
   display: inline-block;
   font-size: 18px;
   border: none;
+  color:#FFE4E1;
 }
 
 .btn-secondary{
-  background-color: white;
+  background-color:#ff7f50;
   text-align: center;
   padding: 10px 20px;
   border-radius: 50px;
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
+  color: #FFE4E1;
+  border: none;
+  }
+
+  .btn-ter {
+  background-color:#FFFACD;
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  color:#ff7f50;
+  border: none;
   }
