@@ -48,18 +48,22 @@ margin: 20px;
   font-family: Indie Flower;
   margin:20px;
 
-
 }
 
 .card-body {
   padding: 30px;
   flex: 1 1 auto;
   display: block;
-  color: #FFFAF0;
+  color: #fadda3;
   text-align: center!important;
   font-size: 17px;
   font-weight: bold;
   font-family: Indie Flower  ;
+  height: 150px;
+}
+
+.card-body img{
+  margin-bottom: 15px;
 }
 
 .card-footer {
@@ -67,7 +71,7 @@ margin: 20px;
   padding: 15px;
   text-align: center;
   border-radius: 0 0 19px 19px;
-  color: #FFFAF0!important;
+  color: #eae9e5!important;
   display: block;
   font-family: Indie Flower;
 }
@@ -75,5 +79,5 @@ margin: 20px;
 
 
 .all {
-  background-color: #FFFACD;
+  background-color: #f5f4ef;
 }

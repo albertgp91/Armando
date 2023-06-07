@@ -9,4 +9,8 @@ class PagesController < ApplicationController
 
   def receivingday
   end
+
+
+
 end
+
