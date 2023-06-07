@@ -1,0 +1,22 @@
+<div class="bg-bisque" style="min-height: 100vh">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h1><b>These are the letters that you sent:</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <% @letters.each do |letter| %>
+      <div class="col-12 mb-4">
+        <%= link_to letter_path(letter), class: "text-decoration-none" do %>
+        <div class="border p3 rounded shadow">
+          <p class="m-0"><%= letter.subject %></p>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
