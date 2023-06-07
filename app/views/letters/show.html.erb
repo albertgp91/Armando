@@ -4,18 +4,17 @@
         <div class="card col-8 shadow p-4">
           <div class="container">
               <div class="d-flex justify-content-between align-items-center my-4">
-                <h1 class="mb-0">A letter from <%= @letter.user_id %></h1>
+                <h1 class="mb-0 letter_title">A letter from <%= @letter.user_id %></h1>
                   <div>
                     <%= link_to letter_path(@letter), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
                         <i class="far fa-trash-alt"></i>
                     <% end %>
                   </div>
                 </div>
-                <hr>
+                <hr class="letter_spacer">
             <div class="container">
-                  <div class="d-flex">
-                    <div class="row col-lg-6">
-                      <ul class="list-group list-group-flush mb-4">
+                    <div class="row v100">
+                      <ul class="list-group list-group-flush mb-2">
                           <li class="list-group-item">Subject: <%=@letter.subject %></li>
                           <li class="list-group-item">Letter: <%= @letter.content %></li>
                       </ul>
@@ -24,7 +23,6 @@
                         <%# <% else %>
                         <%# <% end %>
                       </div>
-                    </div>
                   </div>
                     <div class="row d-flex">
                       <div class="card-body">
@@ -32,7 +30,9 @@
                         <%= link_to "Go back", inbox_path, class: "btn-secondary"%>
                       </div>
                     </div>
-
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     </div>
