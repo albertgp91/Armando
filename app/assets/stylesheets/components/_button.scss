@@ -1,12 +1,15 @@
 .btn-main{
-  background-color: darkblue;
+  background-color: #c44d56;
+  color: white;
   text-align: center;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 23px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
   border: none;
+  margin-right: 13px;
 }
 
 .btn-secondary{
@@ -16,5 +19,7 @@
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 23px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  color:#c44d56;
   }

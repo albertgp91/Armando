@@ -2,11 +2,11 @@
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
       <div class="card shadow col-md-8 p-5">
-          <h1>You can write your letter below:</h1>
+          <h1 class="mb-3 letter_title">You can write your letter below:</h1>
 
           <%= simple_form_for(@letter) do |f| %>
 
-            <div class="form-inputs">
+            <div class="form-inputs list-group-item" >
               <%= f.input :subject %>
               <%= "User will receive your letter X days at Y time" %>
               <%= f.input :content %>
