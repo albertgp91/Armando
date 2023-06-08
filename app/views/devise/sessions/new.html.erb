@@ -1,13 +1,13 @@
 
 
-  <div class="container shadow mt-4 all">
+  <div class="container mt-4 all">
     <div class="center d-flex justify-content-center flex-column align-items-center">
       <div class="image">
        <%= image_tag "logo", class: "login", height: 100, width: 100%>
       </div>
       <div class="form">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-        <div class="form-inputs form-login ">
+        <div class="form-inputs form-login letter-bg list-group-item">
           <%= f.input :email,
                       required: false,
                       autofocus: true,
@@ -19,14 +19,13 @@
         </div>
 
         <div class="form-actions d-flex justify-content-center">
-          <%= f.button :submit, "Log in", class:"btn-secondary m-3"%>
+          <%= f.button :submit, "Log in", class:"btn-main m-3"%>
         </div>
         <% end %>
+        <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
 </div>
 
-
-<%= render "devise/shared/links" %>
 </div>

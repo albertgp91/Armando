@@ -9,10 +9,10 @@
           <%= form_with url: users_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query,
                 params[:query],
-                class: "form-control custom-borders",
+                class: "form-control custom-borders height-40",
                 placeholder: "Type your friends' username"
                 %>
-              <%= submit_tag "Search", name: "", class: "btn-search nav-search-button" %>
+              <%= submit_tag "Search", name: "", class: "btn-search nav-search-button height-40" %>
           <% end %>
         </div>
       </div>
