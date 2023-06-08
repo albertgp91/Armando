@@ -38,6 +38,6 @@ class LettersController < ApplicationController
   end
 
   def letter_params
-    params.require(:letter).permit(:content, :subject)
+    params.require(:letter).permit(:content, :subject, photos: [] )
   end
 end

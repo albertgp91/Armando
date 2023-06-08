@@ -18,10 +18,12 @@
                           <li class="list-group-item">Subject: <%=@letter.subject %></li>
                           <li class="list-group-item">Letter: <%= @letter.content %></li>
                       </ul>
-                        <%# <% if @letter.photo.present? %>
-                        <%# <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
-                        <%# <% else %>
-                        <%# <% end %>
+                        <% if @letter.photos.present?%>
+                            <%= @letter.photos.each do |photo| %>
+                            <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
+                            <% end %>
+                        <% else %>
+                        <% end %>
                       </div>
                   </div>
                     <div class="row d-flex">
