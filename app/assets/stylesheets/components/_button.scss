@@ -1,5 +1,5 @@
 .btn-main{
-  background-color: #DC143C;
+  background-color: #d44a1e;
   text-align: center;
   padding: 10px 20px;
   border-radius: 50px;
@@ -10,10 +10,16 @@
   border: none;
   margin-right: 13px;
   color:#FFE4E1;
+
+}
+
+.btn-main:hover {
+  background-color:#f9f6f1 ;
+  color:#d44a1e;
 }
 
 .btn-secondary{
-  background-color:#ff7f50;
+  background-color:#fff3c9 ;
   text-align: center;
   padding: 10px 20px;
   border-radius: 50px;
@@ -21,8 +27,13 @@
   display: inline-block;
   font-size: 23px;
   font-family: "Nunito", "Helvetica", "sans-serif";
-  color:#c44d56;
+  color:: #d44a1e;
   border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color:#d44a1e;
+    color:#fff3c9;
   }
 
   .btn-ter {
@@ -36,3 +47,17 @@
   color:#ff7f50;
   border: none;
   }
+
+.btn-search{
+  background-color: #FFE4E1;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 23px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  border: none;
+  margin-right: 13px;
+  color:#d44a1e;
+}

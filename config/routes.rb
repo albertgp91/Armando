@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get "inbox", to: "letters#inbox", as: :inbox
   get "sent", to: "letters#sent", as: :sent
   get "dashboard", to: "pages#dashboard", as: :dashboard
-  get "receivingday", to: "pages#receivingday", as: :receivingday
+  get "receivingday", to: "pages#receivingday", as: :receiving_day
 end
