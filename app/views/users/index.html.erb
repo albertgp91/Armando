@@ -1,0 +1,21 @@
+<div class="container pt-5" style="min-height: 100vh">
+  <h1 class="text-center">This is the user you're looking for:</h1>
+  <div class="row justify-content-center pt-5">
+      <% @users.each do |user| %>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <%= link_to user_path(user), class: "text-decoration-none" do %>
+            <div class="card h-100 shadow">
+             <%# <% if user.photo.present? %>
+              <%# <%= cl_image_tag user.photo.key, height: 300, crop: :fill %>
+              <%# <% else %>
+              <%# <%= image_tag "user2.png", height: 200 %>
+              <%# <% end %>
+                <div class="card-body text-center">
+                  <%= user.full_name %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+</div>

@@ -25,27 +25,27 @@ user2 = User.create!(
 
 
 Letter.create!(
-  content: 'Letter 1 content',
-  subject: 'Letter 1 subject',
+  content: 'Hi Matilde! It was very nice to meet you in the summer camp!',
+  subject: 'Summer camp',
   user_id: user1.id,
   receiver_id: user2.id
 )
 
 Letter.create!(
-  content: 'Letter 2 content',
-  subject: 'Letter 2 subject',
+  content: 'Hello John! I wanted to ask you if you will go to the event next month?',
+  subject: 'Next event',
   user_id: user2.id,
   receiver_id: user1.id
 )
 Letter.create!(
-  content: 'Letter 3 content',
-  subject: 'Letter 3 subject',
+  content: 'Hi John! I just wanted to say Merry Christmas!',
+  subject: 'Merry Christmas',
   user_id: user2.id,
   receiver_id: user1.id
 )
 Letter.create!(
-  content: 'Letter 4 content',
-  subject: 'Letter 4 subject',
+  content: 'Hello Matilde! I wanted to ask you how were your holidays?',
+  subject: 'Holidays',
   user_id: user1.id,
   receiver_id: user2.id
 )
