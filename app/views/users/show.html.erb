@@ -1,4 +1,12 @@
 <div class="container">
-  <h1>Your user profile:</h1>
-  <%= @user.full_name %>
+  <div class="row justify-content-center">
+   <h1>Your user profile:</h1>
+    <ul>
+      <li>
+       <%= @user.full_name %>
+       <%= @user.email %>
+       <%= @user.receiving_day %>
+      </li>
+    </ul>
+  </div>
 </div>
