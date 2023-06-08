@@ -1,12 +1,37 @@
-<div class="container">
-  <div class="row justify-content-center">
-   <h1>Your user profile:</h1>
-    <ul>
-      <li>
-       <%= @user.full_name %>
-       <%= @user.email %>
-       <%= @user.receiving_day %>
-      </li>
-    </ul>
+<div class="bg-bisque" style="min-height: 100vh">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card col-8 shadow p-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center my-4">
+                <h1 class="mb-0">This is the info about the user you're looking for:</h1>
+            </div>
+            <hr>
+            <div class="container">
+                  <div class="d-flex">
+                    <div class="row col-lo-6">
+                      <%# <% if @user.photo.present? %>
+                        <%# <%= cl_image_tag @user.photo.key, height: 400, crop: :fill %>
+                        <%# <% else %>
+                        <%# <%= image_tag "logo.png", height: 400 %>
+                        <%# <% end %>
+                      </div>
+                      <ul class="list-group list-group-flush mb-4">
+                          <li class="list-group-item">Username: <%=@user.user_name %></li>
+                          <li class="list-group-item">Full Name: <%=@user.full_name %></li>
+                          <li class="list-group-item">Receiving Day: <%= @user.receiving_day %></li>
+                      </ul>
+                    </div>
+                  </div>
+                    <div class="row d-flex">
+                      <div class="card-body">
+                        <%= link_to "Connect with this user", dashboard_path(@user), class: "btn-main"%>
+                        <%= link_to "Go back", dashboard_path(@user), class: "btn-secondary"%>
+                      </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+ </div>
