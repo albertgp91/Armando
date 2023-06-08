@@ -7,6 +7,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.all
+    if params[:query].present?
+      @users = @users.where(user_name: (params[:query]))
+    end
+  end
+
   private
 
   def user_params
