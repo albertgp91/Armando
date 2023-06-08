@@ -10,4 +10,7 @@ class PagesController < ApplicationController
   def receivingday
   end
 
+  def profile
+    @user = current_user
+  end
 end
