@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'user/update'
   devise_for :users, controllers: { registrations: "registrations" }
+  get '/profile', to: 'pages#profile', as: :profile
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
