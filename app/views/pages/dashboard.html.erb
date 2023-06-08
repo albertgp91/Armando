@@ -1,41 +1,50 @@
-<div class="bg-bisque" style="min-height: 100vh">
-    <div class="container-fluid py-5 shadow">
-      <div class="col-md-8 text-center">
-        <h1><b>What would you like to do?<b></h1>
+<div class="container-fluid py-5">
+ <div class="col-12 text-center">
+        <h1 class="mb-3 letter_title">What would you like to do?</h1>
       </div>
-          <div class="row justify-content-between">
-              <div class="col-md-4">
-                <%= link_to new_letter_path(@letter), class: 'text-decoration-none text-dark' do %>
-                  <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
+</div>
 
-                      <%= image_tag "https://cdn-icons-png.flaticon.com/512/124/124053.png", height: 100, width: 100 %>
-                      <h5 class="card-title">Send Letter</h5>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-              <div class="col-md-4">
-                <%= link_to inbox_path(@letter), class: 'text-decoration-none text-dark' do %>
-                  <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
+<div class="container">
+<div class="row">
 
-                      <%= image_tag "https://cdn-icons-png.flaticon.com/128/2766/2766476.png", height: 100, width: 100 %>
-                      <h5 class="card-title">Letterbox</h5>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-              <div class="col-md-4">
-                <%= link_to sent_path(@letter), class: 'text-decoration-none text-dark' do %>
-                  <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                      <%= image_tag "https://cdn-icons-png.flaticon.com/128/10804/10804962.png", height: 100, width: 100 %>
-                      <h5 class="card-title">Letters Sent</h5>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-          </div>
-    </div>
+<div class="col-12 col-md-4 mb-5 mb-md-0">
+<%= link_to new_letter_path(@letter), class: 'text-decoration-none text-dark' do %>
+<div class="cardhome">
+<div class="card-body">
+<%= image_tag "https://cdn-icons-png.flaticon.com/512/124/124053.png", height: 100, width: 100 %>
+</div>
+<div class="card-footer">
+<span>Send Letter</span>
+</div>
+</div>
+<% end %>
+</div>
+
+<div class="col-12 col-md-4 mb-5 mb-md-0">
+<%= link_to inbox_path(@letter), class: 'text-decoration-none text-dark' do %>
+<div class="cardhome">
+<div class="card-body">
+<%= image_tag "https://cdn-icons-png.flaticon.com/128/2766/2766476.png", height: 100, width: 100 %>
+</div>
+<div class="card-footer">
+<span>Letterbox</span>
+</div>
+</div>
+<% end %>
+</div>
+
+<div class="col-12 col-md-4 mb-5 mb-md-0">
+<%= link_to sent_path(@letter), class: 'text-decoration-none text-dark' do %>
+<div class="cardhome">
+<div class="card-body">
+<%= image_tag "https://cdn-icons-png.flaticon.com/128/10804/10804962.png", height: 100, width: 100 %>
+</div>
+<div class="card-footer">
+<span>Letters Sent</span>
+</div>
+</div>
+<% end %>
+</div>
+
+</div>
 </div>

@@ -1,7 +1,7 @@
 <div class="bg-bisque" style="min-height: 100vh">
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
-        <div class="card col-8 shadow p-4">
+        <div class="card col-8 shadow p-4 letter-bg">
           <div class="container">
               <div class="d-flex justify-content-between align-items-center my-4">
                 <h1 class="mb-0 letter_title">A letter from <%= @letter.user_id %></h1>
@@ -18,10 +18,12 @@
                           <li class="list-group-item">Subject: <%=@letter.subject %></li>
                           <li class="list-group-item">Letter: <%= @letter.content %></li>
                       </ul>
-                        <%# <% if @letter.photo.present? %>
-                        <%# <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
-                        <%# <% else %>
-                        <%# <% end %>
+                        <% if @letter.photos.present?%>
+                            <%= @letter.photos.each do |photo| %>
+                            <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
+                            <% end %>
+                        <% else %>
+                        <% end %>
                       </div>
                   </div>
                     <div class="row d-flex">

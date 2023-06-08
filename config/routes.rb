@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :letters
-  resources :users, only: [ :update, :index ]
+  resources :users, only: [ :update, :index, :show ]
   get "inbox", to: "letters#inbox", as: :inbox
   get "sent", to: "letters#sent", as: :sent
   get "dashboard", to: "pages#dashboard", as: :dashboard
