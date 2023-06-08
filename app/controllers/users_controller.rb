@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   def update
+    user = current_user
     if user.update(user_params)
       redirect_to dashboard_path
     else
-      render :new, status: :unprocessable_entity
+      render :receiving_day, status: :unprocessable_entity
     end
   end
 
