@@ -9,18 +9,16 @@
   font-family: "Nunito", "Helvetica", "sans-serif";
   border: none;
   margin-right: 13px;
-  color:#FFE4E1;
+  color:#fff3e1;
 
 }
 
 .btn-main:hover {
-  background-color:#f9f6f1 ;
-  color:#d44a1e;
-  border: 2px solid #d44a1e;
+
 }
 
 .btn-secondary{
-  background-color:#fff3c9 ;
+  background-color:#fff3e1 ;
   text-align: center;
   padding: 10px 20px;
   border-radius: 50px;
@@ -30,11 +28,11 @@
   font-family: "Nunito", "Helvetica", "sans-serif";
   color:#d44a1e;
   border: none;
+  border: 2px solid #d44a1e;
   }
 
   .btn-secondary:hover {
-    background-color:#d44a1e;
-    color:#fff3c9;
+
   }
 
   .btn-ter {
