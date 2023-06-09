@@ -7,7 +7,11 @@
           <%= simple_form_for(@letter) do |f| %>
 
             <div class="form-inputs list-group-item" >
-              <%= f.association :receiver, collection: User.order(:full_name),  label_method: :full_name %>
+              <%= f.association :receiver,
+              collection: User.where.not(id: current_user.id).order(:full_name),
+               label_method: :full_name,
+               include_hidden: false,
+               include_blank: false %>
               <%= f.input :subject %>
               <%= "User will receive your letter X days at Y time" %>
               <%= f.input :content %>
