@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   def update
     user = current_user
     if user.update(user_params)
-      redirect_to dashboard_path
+      if session[:user_info] == "profile"
+       redirect_to profile_path
+      else
+        redirect_to dashboard_path
+      end
     else
       render :receiving_day, status: :unprocessable_entity
     end
@@ -21,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-  end 
+  end
 
   private
 
@@ -31,7 +35,7 @@ class UsersController < ApplicationController
 
 
   def user_params
-    params.require(:user).permit(:email, :full_name, :user_name, :receiving_day, :receiving_time, :photo)
+    params.require(:user).permit(:email, :full_name, :user_name, :receiving_time, :photo, receiving_day: [])
   end
 
 end
