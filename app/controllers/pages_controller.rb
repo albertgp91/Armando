@@ -12,5 +12,6 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    session[:user_info] = action_name
   end
 end
