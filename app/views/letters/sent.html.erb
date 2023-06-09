@@ -7,12 +7,17 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <% @letters.each do |letter| %>
       <div class="col-12 mb-4">
         <%= link_to letter_path(letter), class: "text-decoration-none" do %>
-        <div class="border p3 rounded shadow letter_card">
-          <p class="m-0"><%= letter.subject %></p>
+        <div class="p3 shadow letter_card card-round mx-auto">
+          <div>
+            <b><%= letter.user.full_name %></b>
+          </div>
+          <div>
+            <%= letter.subject %></p>
+          </div>
         </div>
         <% end %>
       </div>
