@@ -6,14 +6,14 @@ class LettersController < ApplicationController
   end
 
   def sent
-    @letters = Letter.where(user_id: current_user.id)
+    @letters = Letter.where(user_id: current_user.id).reverse
   end
 
   def create
     @letter = Letter.new(letter_params)
     @letter.user = current_user
     if @letter.save
-      redirect_to letters_path
+      redirect_to sent_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,6 +38,6 @@ class LettersController < ApplicationController
   end
 
   def letter_params
-    params.require(:letter).permit(:content, :subject, photos: [] )
+    params.require(:letter).permit(:content, :subject, :receiver_id, photos: [])
   end
 end
