@@ -64,7 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_105331) do
     t.string "full_name"
     t.string "user_name"
     t.string "receiving_day", default: [], array: true
-    t.time "receiving_time", default: "2000-01-01 10:29:38"
+    t.time "receiving_time", default: "2000-01-01 09:56:54"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
