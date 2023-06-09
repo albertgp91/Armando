@@ -4,11 +4,12 @@ class UsersController < ApplicationController
   def update
     user = current_user
     if user.update(user_params)
-      if session[:user_info] == "profile"
-       redirect_to profile_path
-      else
-        redirect_to dashboard_path
-      end
+      # if session[:user_info] == "profile"
+      #   redirect_to profile_path
+      # else
+      #   redirect_to dashboard_path
+      # end
+      redirect_to profile_path
     else
       render :receiving_day, status: :unprocessable_entity
     end

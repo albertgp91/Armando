@@ -2,21 +2,32 @@
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
       <div class="card shadow col-md-8 p-5 letter-bg">
-          <h1 class="mb-3 letter_title  ">My profile</h1>
+          <h1 class="mb-3 letter_title">My profile</h1>
 
           <div class="avatar_edit">
-            <%=image_tag "https://deco-de-heros.com/91943-thickbox_default/masque-en-carton-disney-le-roi-lion-27-cm.webp", class: "avatar"%> </div>
-          <div class=information><h2>Name</h2>
-        <%= @user.user_name %>
+            <%=image_tag "https://deco-de-heros.com/91943-thickbox_default/masque-en-carton-disney-le-roi-lion-27-cm.webp", class: "avatar"%>
           </div>
-         <div class= "information"><h2>Email</h2>
-         </div>
-         <%= @user.email %>
-         <div class= "information"><h2>Your receiving letter day</h2>
-         </div>
-         <%= @user.receiving_day %> <h2>at</h2> <%=  @user.receiving_time.strftime("%H:%M") %>
 
-         <div class= "d-flex ">
+          <div class=information><h2>Name</h2>
+            <%= @user.user_name %>
+          </div>
+
+         <div class= "information">
+          <h2>Email</h2>
+          <%= @user.email %>
+        </div>
+
+
+         <div class= "information">
+          <h2>Your receiving letter day</h2>
+           <%= @user.receiving_day %>
+          <h2>at</h2>
+          <%=  @user.receiving_time.strftime("%H:%M") %>
+        </div>
+
+
+
+         <div class= "flex">
 <%= link_to "Edit my profil",edit_user_registration_path,class:"btn-main-edit" %>
 </div>
 <div><%= link_to "Change my receiving letter day",receiving_day_path,class:"btn-main-edit" %></div>
