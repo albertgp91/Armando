@@ -17,4 +17,6 @@ class PagesController < ApplicationController
 
   def avatar
   end
+
+
 end

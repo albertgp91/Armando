@@ -1,0 +1,15 @@
+<h2>"This is your requests friends"</h2>
+
+<%= @user.friends.each do |friend|  %>
+  <li><%= friend.full_name %> <%= friend.user_name %>
+    <%= link_to "Accept", friend.accept_friendship %>
+  </li>
+<% end %>
+
+<h2>"This is your list of friends"</h2>
+
+<%= @user.friends.all do |friend|  %>
+  <li><%= friend.name %> - <%= friend.username %>
+    <%= link_to 'Remove friendship', friend.delete_friendship %>
+  </li>
+<% end  %>
