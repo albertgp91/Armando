@@ -2,7 +2,7 @@
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
-        <h1 class="mb-0 letter_title">These are the letters that you sent:</h1>
+        <h1 class="mb-0 letter_title"> Letters Sent:</h1>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
         <%= link_to letter_path(letter), class: "text-decoration-none" do %>
         <div class="p3 shadow letter_card card-round mx-auto">
           <div>
-            <b><%= letter.user.full_name %></b>
+            <p><strong><%= letter.user.full_name %></strong> to <strong><%= letter.receiver.full_name %></strong></p>
           </div>
           <div>
             <%= letter.subject %></p>
