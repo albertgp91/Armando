@@ -34,6 +34,14 @@ Letter.create!(
 )
 
 Letter.create!(
+  content: "Hi Peter, you're so incredibly good playing ping pong. I hope one day you can meet my friend Mateo who will crash you hard in a french way. Keep trainning and good luck!",
+  subject: "Peter Pong vs Mateo",
+  user_id: user1.id,
+  receiver_id: user2.id
+)
+
+
+Letter.create!(
   content: "Dear Harry! I must confess that I have a profound admiration for you. I never saw anyone eating so many cookies. I hope one day I'll be able to do it as well. With respect, Peter",
   subject: "You're the best!",
   user_id: user2.id,
@@ -44,10 +52,4 @@ Letter.create!(
   subject: "You are magic",
   user_id: user2.id,
   receiver_id: user1.id
-)
-Letter.create!(
-  content: "Hi Peter, you're so incredibly good playing ping pong. I hope one day you can meet my friend Mateo who will crash you hard in a french way. Keep trainning and good luck!",
-  subject: "Peter Pong vs Mateo",
-  user_id: user1.id,
-  receiver_id: user2.id
 )
