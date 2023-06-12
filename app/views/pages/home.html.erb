@@ -1,11 +1,11 @@
 <html>
-<div class=all>
+
   <div class="title">
     <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class=title-ban><h1><b>The messaging platform for kids designed to create digital healthy habits</h1></b>
-              <h2 style="color: #DAA520	; font: size 300px;"> Empower your children to connect with their peers online in an engaging, beneficial manner that enriches their experiences, rather than fostering dependence</h2>
+          <div class="col-lg-10">
+            <div class=title-ban><h1><b>Armando app, <br> the first messaging platform for kids </h1></b>
+              <h2 style="color: #DAA520	; font: size 300px;"> Designed to create digital healthy habits <br> Teach your kids how to commuinicate in an engaging way</h2>
             </div>
           </div>
         </div>
@@ -14,54 +14,61 @@
         <!-- User is logged in, so hide the button -->
         <!-- Add your logged-in user logic or redirect to appropriate page -->
         <% else %>
-        <div class="btn-account">
-          <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
-        </div>
+          <div class="btn-account">
+            <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
+          </div>
         <% end %>
-        </div>
+  </div>
 
-
-      <div class="container">
-        <div class="benefit">
-          What makes Armando the ideal messaging platform for children?
-        </div>
-      <div class="row">
-      <div class="col-12 col-md-4 mb-5 mb-md-0">
-        <a class="cardhome">
-          <div class="card-top">
-             <span>It's The Safest</span>
-          </div>
-          <div class="card-body">
-            <p>Unlike other messaging and social media platforms, connections with your children are only possbile with your approval. </p>
-          </div>
-
-        </a>
-      </div>
-
-      <div class="col-12 col-md-4 mb-5 mb-md-0">
-        <a class="cardhome">
-          <div class="card-top">
-            <span>It Doesn't Create Addiction</span>
-          </div>
-          <div class="card-body">
-            <p>Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages at their chosen time</p>
-          </div>
-
-        </a>
-      </div>
-
-      <div class="col-12 col-md-4 mb-5 mb-md-0">
-      <a class="cardhome">
-          <div class="card-top">
-            <span>It'd Advertising Free</span>
-          </div>
-          <div class="card-body">
-            <p>Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content. </p>
-          </div>
-
-        </a>
-      </div>
-
+  <div class="benefit1" >
+    <div class="d-flex align-items-center p-3">
+      <%= image_tag "addiction.png", height: "75%" %>
+    </div>
+    <div class="d-flex align-items-center p-2">
+      <h2 class="text-center">No addiction <br> Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages at their chosen time</h2>
     </div>
   </div>
-</div>
+
+  <div class="benefit2">
+
+      <div class="d-flex align-items-center p-2">
+        <h2 class="text-center">Safe <br> Unlike other messaging and social media platforms, connections with your children are only possbile with your approval</h2>
+      </div>
+      <div class="d-flex align-items-center p-3">
+       <%= image_tag "safe.png", height: "75%" %>
+      </div>
+  </div>
+
+
+        <div class = "benefit3">
+            <div class="d-flex align-items-center p-3">
+              <%= image_tag "pub.png", height: "75%" %>
+            </div>
+          <div class="d-flex align-items-center p-2">
+              <h2 class="text-center">Advertising free <br> Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content</h2>
+          </div>
+        </div>
+
+
+        <div class = "benefit4">
+          <div class="d-flex align-items-center p-3">
+            <%= image_tag "logo.png", height: "65%" %>
+          </div>
+          <div class="d-flex-column align-items-center p-2">
+            <h2 class="text-center"> How does it work ?</h2>
+            <h2>1- Create an account</h2>
+            <h2>2- Choose which day of the week to receive the letters</h2>
+            <h2>3- Send a letter to your friends</h2>
+            <div class="text-center p-4">
+           <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
+          </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+ </html>

@@ -8,8 +8,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 70px;
-  border-radius: 50%;
+  width: 200px;
+
 }
 
 .navbar-lewagon .nav-link {
@@ -20,8 +20,8 @@
 }
 
 .avatar {
- border: 3px solid #fff3c9;
- border-radius: 50%;
+ border: 2px solid #fff3c9;
+ border-radius: 47%;
  width: 40px;
 }
 
@@ -32,8 +32,15 @@
 .dropdown-item {
   text-align: center !important;
   color: #d44a1e !important;
-  font-family: Indie Flower !important;
-  font-size: 18px !important;
+  font-family: monospace, "monaco", sans-serif;
+  font-size:medium;
+  font-style: normal;
   background-color: #fff3c9 !important;
-  font-weight: bold !important;
+
+}
+
+.dropdown-menu{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 5px;
 }

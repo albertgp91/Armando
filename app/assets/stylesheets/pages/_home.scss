@@ -2,7 +2,7 @@
 .title {
   font-weight: bold;
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: #d44a1e;
   background-image: url('https://img.freepik.com/vecteurs-libre/vecteur-cadre-arc-ciel-mignon-dans-style-dessine-main-mignon-fond-beige_53876-126112.jpg?w=826&t=st=1686222476~exp=~hmac=f75ec07201833d8f6b37d5ce1a212578b71efcd5ba6e8bfb55ca5165a216f761');
   background-size: cover;
@@ -15,14 +15,11 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding-bottom: 0px;
 }
 
 .title-ban{
 background-color: transparent;
-margin-bottom: 5px;
-border-radius: 10px;
-padding: 20px;
-border: 2, solid, #d44a1e;
 }
 
 .benefit {
@@ -86,6 +83,47 @@ border: 2, solid, #d44a1e;
 
 
 
-.all {
-  background-color: #f9f6f1;
+.benefit1 {
+  height: 280px;
+  background-color: #f7a15b ;
+  padding-top: 0px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  color:#FDEED9 ;
+}
+
+.benefit2{
+  height: 280px;
+  background-color: #fdeed9;
+  padding-top: 0px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  color:#f7a15b ;
+}
+
+.benefit3 {
+  height: 280px;
+  background-color: #f7a15b ;
+  padding-top: 0px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  color:#FDEED9 ;
+
+}
+
+.benefit4{
+  height: 280px;
+  background-color: #fdeed9;
+  padding-top: 0px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  color:#f7a15b ;
 }
