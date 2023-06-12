@@ -14,4 +14,7 @@ class PagesController < ApplicationController
     @user = current_user
     session[:user_info] = action_name
   end
+
+  def avatar
+  end
 end

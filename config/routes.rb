@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "sent", to: "letters#sent", as: :sent
   get "dashboard", to: "pages#dashboard", as: :dashboard
   get "receivingday", to: "pages#receivingday", as: :receiving_day
+  get "avatar", to: "pages#avatar", as: :avatar
 end
