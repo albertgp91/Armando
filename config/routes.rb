@@ -8,7 +8,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :letters
-  resources :users, only: [ :update, :index, :show ]
+  resources :friendships, only: :index
+  resources :users, only: [ :update, :index, :show ] do
+    # /users/:id/request_friendship
+    member do
+      post :request_friendship
+      delete :delete_friendship
+      patch :accept_friendship
+      patch :reject_friendship
+    end
+  end
+
   get "inbox", to: "letters#inbox", as: :inbox
   get "sent", to: "letters#sent", as: :sent
   get "dashboard", to: "pages#dashboard", as: :dashboard

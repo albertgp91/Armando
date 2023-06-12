@@ -25,7 +25,21 @@
                   </div>
                     <div class="row d-flex">
                       <div class="card-body">
-                        <%= link_to "Connect with this user", dashboard_path(@user), class: "btn-main"%>
+                        <% if @friendship %>
+                          <% if @friendship.accepted? %>
+                            <%= link_to "Remove eConnection", delete_friendship_user_path(@user),
+                              class: "btn-main", data: { turbo_method: :delete,  turbo_confirm: 'Are you sure?'  } %>
+                          <% elsif @friendship.sent? %>
+                            <%= link_to "Waiting", "#", class: "btn-main" %>
+                          <% elsif @friendship.rejected? %>
+                            <%= link_to "eConnect with this user", request_friendship_user_path(@user),
+                              class: "btn-main", data: { turbo_method: :post } %>
+                          <% end %>
+                        <% else %>
+                          <%= link_to "eConnect with this user", request_friendship_user_path(@user),
+                            class: "btn-main", data: { turbo_method: :post } %>
+                        <% end %>
+
                         <%= link_to "Go back", dashboard_path(@user), class: "btn-secondary"%>
                       </div>
                     </div>

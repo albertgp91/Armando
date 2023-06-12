@@ -1,0 +1,16 @@
+<h2>This is your requests friends</h2>
+
+<% @received_friends.each do |friend|  %>
+  <li><%= friend.full_name %> - <%= friend.user_name %>
+    <%= link_to "Accept", accept_friendship_user_path(friend), data: { turbo_method: :patch } %>
+    <%= link_to 'Reject', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
+  </li>
+<% end %>
+
+<h2>This is your list of friends</h2>
+
+<% @friends.each do |friend|  %>
+  <li><%= friend.full_name %> - <%= friend.user_name %>
+    <%= link_to 'Remove', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
+  </li>
+<% end  %>
