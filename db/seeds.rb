@@ -25,6 +25,13 @@ user2 = User.create!(
   user_name: 'peter'
 )
 
+admin = User.create!(
+  email: 'admin@neverland.com',
+  password: '123456',
+  full_name: 'Admin',
+  user_name: 'admin',
+  admin: true
+)
 
 Letter.create!(
   content: "Hi Peter! It was amazing the time that I spent with you in Never Land! I hope I will able to come back very soon, I'm afraid if I take too long I'll be to old for you guys :) Take care!",
@@ -39,7 +46,6 @@ Letter.create!(
   user_id: user1.id,
   receiver_id: user2.id
 )
-
 
 Letter.create!(
   content: "Dear Harry! I must confess that I have a profound admiration for you. I never saw anyone eating so many cookies. I hope one day I'll be able to do it as well. With respect, Peter",
