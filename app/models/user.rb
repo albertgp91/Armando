@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :letters
   has_one_attached :photo
   has_many :friends, through: :friendships
-
+  has_one_attached :photo
   # All friendships
   has_many :friendships, -> { Friendship.where(user: self).or(Friendship.where(friend: self)) },
   inverse_of: :user, dependent: :destroy
