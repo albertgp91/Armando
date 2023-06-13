@@ -1,5 +1,9 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="pb-4 letter_title pt-5" style="text-align: center" >Edit your profile</h2>
 
+<div class="bg-#fdeed9" style="min-height: 100vh">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card shadow col-md-8 p-5">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
@@ -35,13 +39,26 @@
                 input_html: { autocomplete: "current-password" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div>
+    <%= link_to "Update", profile_path, class: "btn-main-edit" %>
   </div>
 <% end %>
+</div>
+</div>
+</div>
+</div>
 
-<h3>Cancel my account</h3>
-
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
-
-<%= link_to "Back", :back %>
+<div class="bg-#fdeed9" style="min-height: 100vh">
+  <div class="container-fluid py-5">
+    <div class="row justify-content-center">
+      <div class="card shadow col-md-8 p-3">
+        <h3 class="pb-1 letter_title pt-1" style="text-align: center" >Cancel my account</h3>
+          <div class="d-flex align-items-center justify-content-center p-2">
+            <p> Unhappy ? </p>
+            <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn-main-edit" %>
+          </div>
+      </div>
+       <%= link_to "Back to the dashboard", :back, class: "row justify-content-center pt-5" %>
+    </div>
+  </div>
+</div>

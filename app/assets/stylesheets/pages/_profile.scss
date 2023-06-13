@@ -1,7 +1,57 @@
 
 .avatar_edit {
-  border: 3px solid #fff3c9;
-  border-radius: 50%;
-  height: 100px;
+border: 3px solid #fff3c9;
+border-radius: 50%;
+height: 80px;
+margin: 15px;
+}
 
+.hovertext {
+  position: relative;
+
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 3;
+  width: 170px;
+  background-color: #fdeed9;
+  color: #f7a15b;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1px;
+  transition: opacity 0.4s ease-in-out;
+  font-size: small;
+
+  position:absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.block.h2 {
+color: #4d4949;
+}
+
+.profile-header {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+
+p {
+  margin-bottom: 0px;
+}
+
+.info {
+  border: solid;
+  border-color: #d44a1e;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -16,6 +16,8 @@
 .btn-main:hover {
   background-color:#fff3e1;
   color: #d44a1e;
+  border: #d44a1e;
+  border:solid;
 }
 
 .btn-secondary{
@@ -33,7 +35,10 @@
   }
 
   .btn-secondary:hover {
-
+    background-color:#d44a1e;
+    color: #fff3e1;
+    border:#fff3e1 ;
+    border: solid;
   }
 
   .btn-ter {
@@ -69,9 +74,17 @@
   border-radius: 50px;
   text-decoration: none;
   display: inline-block;
-  font-size: 23px;
+  font-size: 15px;
   font-family: "Nunito", "Helvetica", "sans-serif";
   border: none;
-  margin: 10px;
+  margin: 8px;
   color:#FFE4E1;
+}
+
+
+.btn-main-edit:hover {
+  background-color:#fff3e1;
+  color: #d44a1e;
+  border: #d44a1e;
+  border: solid;
 }
