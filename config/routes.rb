@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       delete :delete_friendship
       patch :accept_friendship
       patch :reject_friendship
+      get :choose_avatar
+      patch :upload_avatar
     end
   end
 
