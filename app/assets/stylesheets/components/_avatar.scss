@@ -14,3 +14,16 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.avatar-item {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.chosen-avatar {
+  border: 2px solid orange;
+  transform: scale(1.2);
+}

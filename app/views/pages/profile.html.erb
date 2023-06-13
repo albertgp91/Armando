@@ -6,9 +6,10 @@
           <div>
             <span class="hovertext" data-hover="Change your avatar">
               <%= link_to avatar_path do %>
-                <%= image_tag "https://deco-de-heros.com/91943-thickbox_default/masque-en-carton-disney-le-roi-lion-27-cm.webp", class: "avatar_edit" %>
+               <%= image_tag @user.avatar_file, class: "avatar"%>
               <% end %>
             </span>
+
           </div>
         </h1>
         <div class="row justify-content-center">

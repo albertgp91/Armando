@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_102212) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_13_143350) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_102212) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "receiver_id"
+    t.boolean "delivered", default: false
     t.index ["receiver_id"], name: "index_letters_on_receiver_id"
     t.index ["user_id"], name: "index_letters_on_user_id"
   end
@@ -74,8 +76,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_102212) do
     t.datetime "updated_at", null: false
     t.string "full_name"
     t.string "user_name"
-    t.string "receiving_day", default: [], array: true
-    t.time "receiving_time", default: "2000-01-01 09:28:34"
+    t.string "receiving_day", default: ["Monday"], array: true
+    t.boolean "admin", default: false, null: false
+    t.datetime "receiving_time", default: "2000-01-01 12:00:00"
+    t.string "avatar_file"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
