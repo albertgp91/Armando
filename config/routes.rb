@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'user/update'
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users
+  match "/404", to: "errors#not_found", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
   get '/profile', to: 'pages#profile', as: :profile
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -17,8 +19,10 @@ Rails.application.routes.draw do
       patch :accept_friendship
       patch :reject_friendship
     end
-  end
 
+
+
+  end
   get "inbox", to: "letters#inbox", as: :inbox
   get "sent", to: "letters#sent", as: :sent
   get "dashboard", to: "pages#dashboard", as: :dashboard
