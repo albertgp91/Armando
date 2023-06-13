@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
+
   get 'user/update'
   devise_for :users, controllers: { registrations: "registrations" }
   get '/profile', to: 'pages#profile', as: :profile
@@ -16,7 +18,13 @@ Rails.application.routes.draw do
       delete :delete_friendship
       patch :accept_friendship
       patch :reject_friendship
+      get :choose_avatar
+      patch :upload_avatar
     end
+  end
+
+  authenticate :user, ->(user) { user.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   get "inbox", to: "letters#inbox", as: :inbox

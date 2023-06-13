@@ -2,7 +2,7 @@ class LettersController < ApplicationController
   before_action :set_letter, only: %i[show destroy]
 
   def inbox
-    @letters = Letter.where(receiver_id: current_user.id)
+    @letters = Letter.where(receiver_id: current_user.id, delivered: true)
   end
 
   def sent

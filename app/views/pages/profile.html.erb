@@ -5,7 +5,7 @@
           <h1 class="mb-3 letter_title" style="text-align: center;" >My profile</h1>
 
           <div class="avatar_edit">
-            <%=image_tag "https://deco-de-heros.com/91943-thickbox_default/masque-en-carton-disney-le-roi-lion-27-cm.webp", class: "avatar"%>
+            <%= image_tag @user.avatar_file, class: "avatar"%>
           </div>
 
           <div class=information>

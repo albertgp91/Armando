@@ -27,6 +27,13 @@ user2 = User.create!(
   user_name: 'peter'
 )
 
+admin = User.create!(
+  email: 'admin@neverland.com',
+  password: '123456',
+  full_name: 'Admin',
+  user_name: 'admin',
+  admin: true
+
 user3 = User.create!(
   email: 'simpson@carton.com',
   password: '123456',

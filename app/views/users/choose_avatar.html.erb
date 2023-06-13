@@ -1,0 +1,27 @@
+<h1>Choose your avatar</h1>
+
+<div data-controller="avatar">
+  <div class="d-flex gap-5 justify-content-center">
+    <%= image_tag "addiction.png", width: 80, height: 80, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "addiction.png" } %>
+    <%= image_tag "bird.png", width: 80, height: 80, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "bird.png" } %>
+    <%= image_tag "letterbox.png", width: 80, height: 80, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "letterbox.png" } %>
+    <%= image_tag "pub.png", width: 80, height: 80, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "pub.png" } %>
+  </div>
+
+  <%= simple_form_for(current_user, url: upload_avatar_user_path(current_user), html: { method: :patch }) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :avatar_file,
+                  as: :hidden,
+                  autofocus: true,
+                  input_html: {
+                    data: {
+                      avatar_target: "input"
+                    }
+                  } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Update" %>
+    </div>
+  <% end %>
+</div>

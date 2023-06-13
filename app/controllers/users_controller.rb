@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[
-    show request_friendship reject_friendship delete_friendship accept_friendship
+    show request_friendship reject_friendship delete_friendship accept_friendship upload_avatar
   ]
 
   def update
@@ -71,6 +71,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def choose_avatar
+  end
+
+  def upload_avatar
+    if @user.update(user_params)
+      redirect_to receiving_day_path
+    else
+      render :choose_avatar, status: :unprocessable_entity, notice: "Please choose an avatar"
+    end
+  end
+
   private
 
   def set_user
@@ -78,6 +89,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :full_name, :user_name, :receiving_time, :photo, receiving_day: [])
+    params.require(:user).permit(:email, :full_name, :user_name, :receiving_time, :avatar_file, receiving_day: [])
   end
 end
