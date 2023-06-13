@@ -36,12 +36,14 @@ class UsersController < ApplicationController
   end
 
   def request_friendship
-    friendship = Friendship.new(user: current_user, friend: @user)
+    valid_key = params.dig('friendship', 'comkey') == @user.comkey
 
-    if friendship.save
+    @friendship = Friendship.new(user: current_user, friend: @user)
+
+    if valid_key && @friendship.save
       redirect_to user_path(@user), notice: "Request sent!"
     else
-      render :show
+      redirect_to user_path(@user), alert: 'Wrong communication key!'
     end
   end
 
