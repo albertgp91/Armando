@@ -1,9 +1,7 @@
-
-
   <div class="container mt-4 all">
     <div class="center d-flex justify-content-center flex-column align-items-center">
       <div class="image">
-       <%= image_tag "logo", class: "login", height: 100, width: 100%>
+       <%= image_tag "logo", class: "login", height: 100%>
       </div>
       <div class="form">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
