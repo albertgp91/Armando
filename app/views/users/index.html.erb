@@ -1,6 +1,6 @@
 <div class="container pt-5" style="min-height: 100vh">
   <% if @users.present? %>
-    <h1 class="text-center">This is the user you're looking for:</h1>
+    <h1 class="letter_title text-center">The friend you're looking for :</h1>
     <div class="row justify-content-center pt-5">
       <% @users.each do |user| %>
         <div class="col-12 col-sm-6 col-md-4 mb-4">
@@ -9,7 +9,7 @@
               <% if user.avatar_file.present? %>
               <%= cl_image_tag user.avatar_file.key, height: 300, crop: :fill %>
                 <% else %>
-              <%= image_tag "bird.png", height: 200 %>
+              <%= image_tag "bird.png", height: 120%>
               <% end %>
               <div class="card-body text-center">
                 <%= user.full_name %>
@@ -20,8 +20,10 @@
       <% end %>
     </div>
   <%else%>
-    <h1 class="text-center pt-5">Sorry, there isn't a user with username : "<%= params[:query] %>"</h1>
-    <h2 class="text-center">Please, try again!</h2>
-    <%= image_tag "bird.png", height: 200 %>
+    <h1 class="letter_title text-center pt-5">Sorry, this username does not exist. </h1>
+
   <% end %>
+  <div>
+       <%= link_to "Back to the dashboard", :back, class: "row justify-content-center pt-5 text-dark" %>
+    </div>
 </div>
