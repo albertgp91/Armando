@@ -1,6 +1,9 @@
 <html>
 
-  <div class="title">
+  <div class="title position-relative">
+    <%= link_to "#more-info", class: "position-absolute more-info-btn" do %>
+      <i class="fa-solid fa-chevron-down text-decoration-underline"></i> See more
+    <% end %>
     <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
@@ -15,117 +18,73 @@
         <!-- Add your logged-in user logic or redirect to appropriate page -->
         <% else %>
           <div class="btn-account">
-            <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
+            <%= link_to "   Create an account   ", new_user_session_path, class: "btn-main shadow" %>
           </div>
         <% end %>
   </div>
-
-  <div class="benefit1" >
-    <div class="d-flex align-items-center p-3">
-      <%= image_tag "addiction.png", height: "75%" %>
-    </div>
-    <div class="d-flex align-items-center p-2">
-      <h2 class="text-center">No addiction <br> Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages at their chosen time</h2>
-    </div>
-  </div>
-
-  <div class="benefit2">
-
-      <div class="d-flex align-items-center p-2">
-        <h2 class="text-center">Safe <br> Unlike other messaging and social media platforms, connections with your children are only possbile with your approval</h2>
-      </div>
-      <div class="d-flex align-items-center p-3">
-       <%= image_tag "safe.png", height: "75%" %>
-      </div>
-  </div>
-
-
-        <div class = "benefit3">
-            <div class="d-flex align-items-center p-3">
-              <%= image_tag "pub.png", height: "75%" %>
-            </div>
-          <div class="d-flex align-items-center p-2">
-              <h2 class="text-center">Advertising free <br> Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content</h2>
-          </div>
         </div>
-
-
-        <div class = "benefit4">
-          <div class="d-flex align-items-center p-3">
-            <%= image_tag "logo.png", height: "65%" %>
-          </div>
-          <div class="d-flex-column align-items-center p-2">
-            <h2 class="text-center"> How does it work ?</h2>
-            <h2>1- Create an account</h2>
-            <h2>2- Choose which day of the week to receive the letters</h2>
-            <h2>3- Send a letter to your friends</h2>
-            <div class="text-center p-4">
-           <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
-          </div>
+  <div class="container-fluid py-5 benefit11" id="more-info">
+    <div class="row py-5">
+        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+          <%= image_tag "exited-father.jpg", height: 300, width: 400, class: "border-image shadow" %>
         </div>
-
-        </div>
-  <div class="container-fluid benefit11">
-    <div class="row">
-        <div class="col-6">
-          <%= image_tag "safe.png", height: 300, width: 300, class: "border-image" %>
-        </div>
-        <div class="col-6">
-          <h2 class="text-start"><b>It's extremelly safe</b></h2>
+        <div class="align-items-start col-5 d-flex justify-content-center flex-column">
+          <h2><b>It's extremelly safe</b></h2>
           <h3>Unlike other messaging and social media platforms, connections with your children are only possbile with your approval.</h3>
         </div>
     </div>
   </div>
 
-  <div class="container-fluid benefit12">
-    <div class="row">
-        <div class="col-6 align-items-center">
-          <h2 class="text-start"><b>Designed to Avoid Addiction</b></h2>
+  <div class="container-fluid py-5 benefit12">
+    <div class="row py-5">
+        <div class="align-items-start col-5 d-flex justify-content-center flex-column offset-1">
+          <h2><b>Designed to Avoid Addiction</b></h2>
           <h3>Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages at their chosen time.</h3>
         </div>
-        <div class="col-6">
-          <%= image_tag "addiction.png", height: 300, width: 300, class: "border-image" %>
+        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+          <%= image_tag "cheerful-girl.jpg", height: 300, width: 400, class: "border-image shadow" %>
         </div>
     </div>
   </div>
-
-    <div class="container-fluid benefit13">
-    <div class="row">
-        <div class="col-6">
-          <%= image_tag "pub.png", height: 300, width: 300, class: "border-image" %>
+  <div class="container-fluid py-5 benefit13">
+    <div class="row py-5">
+        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+          <%= image_tag "single-mother.jpg", height: 300, width: 400, class: "border-image shadow" %>
         </div>
-        <div class="col-6"><h2 class="text-start"><b>It's advertising free</b></h2>
+        <div class="align-items-start col-5 d-flex justify-content-center flex-column">
+          <h2><b>It's advertising free</b></h2>
           <h3>Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content.</h3>
         </div>
     </div>
   </div>
 
-  <div class="container-fluid benefit13">
-    <div class="row justify-content-center">
+  <div class="container-fluid py-5 benefit11">
+    <div class="row py-5 justify-content-center">
       <h2 class="text-center pb-5"><p><b>How does it work?</b></p></h2>
-              <div class="col-6 align-items-center">
-                <%= image_tag "addiction.png", height: 300, width: 300, class: "border-image" %>
+              <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+                <%= image_tag "tablet-girl.jpg", height: 300, width: 400, class: "border-image shadow" %>
               </div>
-                  <div class="col-6 d-flex-column align-items-center p-2">
+                  <div class="col-5 d-flex-column align-items-center">
                     <h3><b>Step 1:</b> Create an account</h2>
-                    <h3><b>Step 2:</b> Choose your avatar.</h2>
-                    <h3><b>Step 3:</b> Choose when you want to receive your letters</h2>
-                    <h3><b>Step 4:</b> Send your first letter!</h2>
-                            <div class="p-4">
-                              <%= link_to "Create an account", new_user_session_path, class: "btn-main" %>
+                    <h3><b>Step 2:</b> Choose your avatar</h2>
+                    <h3><b>Step 3:</b> Choose when to receive your letters</h2>
+                    <h3><b>Step 4:</b> Choose your communication key</h2>
+                    <h3><b>Step 5:</b> Send your first letter!</h2>
+                            <div class="pt-5">
+                              <%= link_to "   Create an account   ", new_user_session_path, class: "btn-main" %>
                             </div>
                   </div>
     </div>
   </div>
 
-   <div class="container-fluid benefit11">
-    <div class="row justify-content-center">
-        <div class="col-6 align-items-center">
-            <%= image_tag "bird.png", height: 300, width: 300, class: "border-image" %>
+   <div class="container-fluid py-5 benefit12">
+    <div class="row py-1 justify-content-center">
+          <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+            <%= image_tag "logo.png", height: 100, class: "border-image" %>
           </div>
-            <div class="col-6 d-flex-column align-items-center p-2">
+            <div class="align-items-start col-5 d-flex justify-content-center flex-column">
               <h4><b>Help & Support</b></h4>
-              <h5>Help & Contact Us</h5>
+              <h5>Contact Us</h5>
               <h5>FAQS</h5>
               <h5>Terms and Conditions</h5>
               <h5>Privacy Policy</h5>

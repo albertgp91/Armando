@@ -1,30 +1,42 @@
-<h2>Sign up</h2>
+<div class="container-fluid d-flex align-items-center justify-content-center pb-5">
+  <div class="row col-6 justify-content-center">
+    <div class="align-items-center d-flex flex-column justify-content-center">
+      <%= image_tag "logo", class: "login", height: 100%>
+    </div>
+          <div class="container align-items-center-flex flex-column shadow signup-form px-5 py-5">
+            <h2>Sign up</h2>
+              <%= simple_form_for(resource, as: resource_name,
+                 url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+                 <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
-  <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :user_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "user_name" }%>
+              <%= f.input :full_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "full_name" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :user_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "user_name" }%>
-    <%= f.input :full_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "full_name" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+            <div class="form-actions text-center pb-3">
+              <%= f.button :submit, "Sign up", class: "btn-main" %>
+            </div>
+          </div>
+          <% end %>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+
+
+    </div>
   </div>
 </div>
-<% end %>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
