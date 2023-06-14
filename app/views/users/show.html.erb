@@ -1,36 +1,36 @@
 <div class="bg-bisque" style="min-height: 100vh">
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
-      <div class="card col-8 shadow p-4">
+      <div class="card col-8 shadow p-4 letter-bg">
         <div class="container">
+                <h1 class="mb-0 text-center">More information about this user</h1>
             <div class="d-flex justify-content-between align-items-center my-4">
-                <h1 class="mb-0">This is the info about the user you're looking for:</h1>
             </div>
             <hr>
-            <div class="container">
-                  <div class="d-flex">
-                    <div class="row col-lo-6">
-                      <%# <% if @user.photo.present? %>
-                        <%# <%= cl_image_tag @user.photo.key, height: 400, crop: :fill %>
-                        <%# <% else %>
-                        <%# <%= image_tag "logo.png", height: 400 %>
-                        <%# <% end %>
+            <div class="container ">
+                  <div class="d-flex ">
+                    <div class="row col-lo-6 ">
+                      <% if @user.avatar_file.present? %>
+                        <%= cl_image_tag @user.avatar_file.key, height: 400, widht: 200, crop: :fill, class: "rounded-circle" %>
+                        <% else %>
+                        <%= image_tag "safe.png", height: 200, width: 200, class: "rounded-circle" %>
+                        <% end %>
                       </div>
-                      <ul class="list-group list-group-flush mb-4">
-                          <li class="list-group-item">Username: <%=@user.user_name %></li>
-                          <li class="list-group-item">Full Name: <%=@user.full_name %></li>
-                          <li class="list-group-item">Receiving Day: <%= @user.receiving_day %></li>
+                      <ul class="list-group list-group-flush mb-4 px-5">
+                          <li class="list-group-item letter-bg">Full Name: <%=@user.full_name %></li>
+                          <li class="list-group-item letter-bg">Username: <%=@user.user_name %></li>
+                          <li class="list-group-item letter-bg">Receiving Day: <%= @user.receiving_day %></li>
                       </ul>
                     </div>
                   </div>
                     <div class="row d-flex">
-                      <div class="card-body">
+                      <div class="text-center pt-5">
                         <% if @friendship %>
                           <% if @friendship.accepted? %>
                             <%= link_to "Remove eConnection", delete_friendship_user_path(@user),
                               class: "btn-main", data: { turbo_method: :delete,  turbo_confirm: 'Are you sure?'  } %>
                           <% elsif @friendship.sent? %>
-                            <%= link_to "Waiting", "#", class: "btn-main" %>
+                            <%= link_to "Request Sent", "#", class: "btn-request-sent" %>
                           <% elsif @friendship.rejected? %>
                             <%= link_to "eConnect with this user", request_friendship_user_path(@user),
                               class: "btn-main", data: { turbo_method: :post } %>

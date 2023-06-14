@@ -33,6 +33,7 @@ admin = User.create!(
   full_name: 'Admin',
   user_name: 'admin',
   admin: true
+)
 
 user3 = User.create!(
   email: 'simpson@carton.com',

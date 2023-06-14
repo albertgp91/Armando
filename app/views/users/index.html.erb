@@ -6,11 +6,11 @@
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <%= link_to user_path(user), class: "text-decoration-none" do %>
             <div class="card h-100 shadow">
-              <%# <% if user.photo.present? %>
-              <%# <%= cl_image_tag user.photo.key, height: 300, crop: :fill %>
-                <%# <% else %>
-              <%# <%= image_tag "user2.png", height: 200 %>
-              <%# <% end %>
+              <% if user.avatar_file.present? %>
+              <%= cl_image_tag user.avatar_file.key, height: 300, crop: :fill %>
+                <% else %>
+              <%= image_tag "bird.png", height: 200 %>
+              <% end %>
               <div class="card-body text-center">
                 <%= user.full_name %>
               </div>
@@ -20,6 +20,8 @@
       <% end %>
     </div>
   <%else%>
-    <h1 class="text-center">There is no user with this name : "<%= params[:query] %>"</h1>
+    <h1 class="text-center pt-5">Sorry, there isn't a user with username : "<%= params[:query] %>"</h1>
+    <h2 class="text-center">Please, try again!</h2>
+    <%= image_tag "bird.png", height: 200 %>
   <% end %>
 </div>
