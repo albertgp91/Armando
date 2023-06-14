@@ -1,26 +1,23 @@
-<div class="body-color">
-<div class="bg-#fff3c9" style="min-height: 100vh">
-  <div class="container-fluid py-5">
-    <div class="row justify-content-center">
-        <%= "Scroll down to see the next section (it needs less space and an if for when empty)" %>
+<div class="container-fluid">
+<div class="row body-color">
+  <div class="col-6 bg-#fff3c9 mt-5">
+    <div class="col justify-content-center">
       <h1 class="mb-3 letter_title text-center pb-3">Friends requests</h1>
-        <div class="card shadow col-md-8 p-5 letter-bg">
-          <% @received_friends.each do |friend|  %>
-            <li><%= friend.full_name %> - <%= friend.user_name %>
-              <%= link_to "Accept", accept_friendship_user_path(friend), data: { turbo_method: :patch } %>
-              <%= link_to 'Reject', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
-            </li>
-          <% end %>
-        </div>
+      <div class="card shadow p-5 letter-bg">
+        <% @received_friends.each do |friend|  %>
+          <li><%= friend.full_name %> - <%= friend.user_name %>
+            <%= link_to "Accept", accept_friendship_user_path(friend), data: { turbo_method: :patch } %>
+            <%= link_to 'Reject', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
+          </li>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="bg-#fff3c9" style="min-height: 100vh">
-  <div class="container-fluid py-5">
-    <div class="row justify-content-center">
-      <h1 class="mb-3 letter_title text-center pb-3">This is your list of friends in Armando</h1>
-        <div class="card shadow col-md-8 p-5 letter-bg">
+  <div class="col-6 bg-#fff3c9 mt-5">
+    <div class="col justify-content-center">
+      <h1 class="mb-3 letter_title text-center pb-3">Friend's list</h1>
+        <div class="card shadow p-5 letter-bg">
           <% @friends.each do |friend|  %>
             <li><%= friend.full_name %> - <%= friend.user_name %>
               <%= link_to 'Remove', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
@@ -31,4 +28,3 @@
   </div>
 </div>
 </div>
-
