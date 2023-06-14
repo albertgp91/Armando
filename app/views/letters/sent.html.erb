@@ -13,10 +13,10 @@
         <%= link_to letter_path(letter), class: "text-decoration-none" do %>
         <div class="p3 shadow letter_card card-round mx-auto">
           <div>
-            <p>From <strong><%= letter.user.full_name %></strong> to <strong><%= letter.receiver.full_name %></strong></p>
+            <p>From: <strong><%= letter.user.full_name %></strong></p>
           </div>
           <div>
-            <%= letter.subject %></p>
+            <p>Subject: <%= letter.subject %></p>
           </div>
         </div>
         <% end %>

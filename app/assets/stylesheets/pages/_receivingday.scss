@@ -12,6 +12,18 @@
   display: none;
 }
 
+.collection_radio_buttons {
+  font-size: 18px !important;
+}
+
+.user_receiving_day {
+  display: flex;
+
+  .form-check-input.is-valid ~ .form-check-label {
+    color: black;
+  }
+}
+
 .form-wrapper{
   display: flex;
   justify-content: space-between;
@@ -41,12 +53,11 @@
 }
 
 .form-selector:checked + label {
-  background-color: rgb(237, 114, 13) !important;
 }
 
 .rec-container{
   background-color: #ffffff;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .body-color{
