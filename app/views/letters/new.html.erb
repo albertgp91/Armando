@@ -13,11 +13,11 @@
                include_hidden: false,
                include_blank: false %>
               <%= f.input :subject %>
-              <%= "User will receive your letter X days at Y time" %>
+              <%= "User will receive your letter" %>
               <%= f.input :content %>
               <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             </div>
-            <div class="form-actions justify">
+            <div class="form-actions text-center pt-4">
               <%= f.submit "Send Letter", class: "btn-main" %>
               <%= link_to "Cancel", inbox_path, class: "btn-secondary" %>
             </div>

@@ -81,10 +81,18 @@
   color:#FFE4E1;
 }
 
-
 .btn-main-edit:hover {
   background-color:#fff3e1;
   color: #d44a1e;
   border: #d44a1e;
   border: solid;
 }
+
+.btn-request-sent{
+  color: #d44a1e;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 23px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  text-decoration: none;
+  pointer-events: none;
