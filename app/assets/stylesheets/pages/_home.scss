@@ -50,7 +50,7 @@ background-color: transparent;
 
 .benefit2{
   height: 280px;
-  background-color: #fdeed9;
+  background-color: #d38b26;
   padding-top: 0px;
   font-family: "Nunito", "Helvetica", "sans-serif";
   font-size: small;
@@ -81,22 +81,44 @@ background-color: transparent;
   justify-content: space-between;
   color:#f7a15b ;
 }
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
 
-.border-image{
-  border-radius: 20px;
+.word {
+	font-family: 'Anton', sans-serif;
+	perspective: 1000px;
+  color:#e0ab67 ;
+}
+.word span {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 100px;
+	user-select: none;
+	line-height: .8;
 }
 
-.benefit11 {
-  background-color: #ffffff ;
-  color:#d44a1e;
+
+@keyframes rotate {
+	20%, 80% {
+		transform: rotateY(180deg);
+	}
+
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 
-.benefit12 {
-  background-color: #d44a1e ;
-   color:#ffffff;
+.word span:nth-child(5).active {
+	animation: toplong 1.5s linear;
 }
 
-.benefit13 {
-  background-color: #fff3e1 ;
-  color:#d44a1e;
+@keyframes toplong {
+	10%, 40% {
+		transform: translateY(-48vh) scaleY(1);
+	}
+
+	90% {
+		transform: translateY(-48vh) scaleY(4);
+	}
 }
+
+/* Other styles */

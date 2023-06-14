@@ -2,10 +2,15 @@
 .avatar_edit {
 border: 3px solid #fff3c9;
 border-radius: 50%;
-height: 80px;
+height: 40px;
 margin: 15px;
 }
-
+.avatar_profile {
+  border: 3px solid #fff3c9;
+  border-radius: 50%;
+  height: 100px;
+  margin: 15px;
+  }
 .hovertext {
   position: relative;
 
@@ -42,6 +47,7 @@ color: #4d4949;
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 0px;
+  font-size: 25px;
 }
 
 
@@ -51,7 +57,9 @@ p {
 
 .info {
   border: solid;
+  border-radius: 10px;
   border-color: #d44a1e;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 25px;
 }
