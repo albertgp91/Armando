@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :friendships, -> { Friendship.where(user: self).or(Friendship.where(friend: self)) },
   inverse_of: :user, dependent: :destroy
 
+  before_save :generate_comkey
+
   # Friends that I have sent a request to and didn't accept yet
   has_many :sent_friendships, -> { Friendship.where(user: self, status: :sent) },
   inverse_of: :user, dependent: :destroy
@@ -39,5 +41,13 @@ class User < ApplicationRecord
 
   def received_friends
     Friendship.where(friend: self, status: :sent).map(&:user)
+  end
+
+  private
+
+  def generate_comkey
+    return if comkey
+
+    self.comkey = SecureRandom.hex(2)
   end
 end

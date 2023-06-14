@@ -36,11 +36,18 @@
                               class: "btn-main", data: { turbo_method: :post } %>
                           <% end %>
                         <% else %>
-                          <%= link_to "eConnect with this user", request_friendship_user_path(@user),
-                            class: "btn-main", data: { turbo_method: :post } %>
+                          <%= form_for :friendship, url: request_friendship_user_path(@user) do |f| %>
+                            <div class="row justify-content-center">
+                            <%= @user.comkey%>
+                            <div class="col-5">
+                              <%= f.text_field :comkey, autocomplete: :off, class: 'form-control', placeholder: "Type password blablab" %>
+                            </div>
+                            <div class="pt-3">
+                              <%= f.submit 'eConnect with this user', class: 'btn-main' %>
+                              <%= link_to "Go back", dashboard_path(@user), class: "btn-secondary"%>
+                            </div>
+                          <% end %>
                         <% end %>
-
-                        <%= link_to "Go back", dashboard_path(@user), class: "btn-secondary"%>
                       </div>
                     </div>
             </div>

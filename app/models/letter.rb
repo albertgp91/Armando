@@ -33,7 +33,8 @@ class Letter < ApplicationRecord
         next_delivery_date.year,
         next_delivery_date.month,
         next_delivery_date.day,
-        time.hour
+        time.hour,
+        time.min
       )
     ).perform_later(self)
   end
