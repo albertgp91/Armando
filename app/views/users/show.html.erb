@@ -11,7 +11,7 @@
                   <div class="d-flex ">
                     <div class="row col-lo-6 ">
                       <% if @user.avatar_file.present? %>
-                        <%= cl_image_tag @user.avatar_file.key, height: 400, widht: 200, crop: :fill, class: "rounded-circle" %>
+                        <%= cl_image_tag @user.avatar_file.key, height: 400, widht: 400, crop: :fill, class: "rounded-circle" %>
                         <% else %>
                         <%= image_tag "safe.png", height: 200, width: 200, class: "rounded-circle" %>
                         <% end %>
