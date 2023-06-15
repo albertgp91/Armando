@@ -23,9 +23,9 @@ Rails.application.routes.draw do
     end
   end
 
-  authenticate :user, ->(user) { user.admin? } do
-    mount Sidekiq::Web => '/sidekiq'
-  end
+  # authenticate :user, ->(user) { user.admin? } do
+  #   mount Sidekiq::Web => '/sidekiq'
+  # end
 
   get "inbox", to: "letters#inbox", as: :inbox
   get "sent", to: "letters#sent", as: :sent
