@@ -20,8 +20,8 @@ user1 = User.create!(
   user_name: 'miguel',
   comkey: 1111,
 )
-file = URI.open("miguel.jpg")
-user1.avatar_file.attach(io: file, filename: "miguel.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/miguel.jpg")
+user1.photo.attach(io: file, filename: "miguel.jpg", content_type: "image/jpg")
 user1.save
 
 user2 = User.create!(
@@ -31,8 +31,8 @@ user2 = User.create!(
   user_name: 'wolfwallstreet',
   comkey: 1111
 )
-file = URI.open("fabien.jpg")
-user2.avatar_file.attach(io: file, filename: "fabien.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/fabien.jpg")
+user2.photo.attach(io: file, filename: "fabien.jpg", content_type: "image/jpg")
 user2.save
 
 user3 = User.create!(
@@ -43,8 +43,8 @@ user3 = User.create!(
   comkey: 1111,
   admin: true
 )
-file = URI.open("anna.jpg")
-user3.avatar_file.attach(io: file, filename: "ana.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/anna.jpg")
+user3.photo.attach(io: file, filename: "ana.jpg", content_type: "image/jpg")
 user3.save
 
 user4 = User.create!(
@@ -54,8 +54,8 @@ user4 = User.create!(
   user_name: 'misskindness',
   comkey: 1111
 )
-file = URI.open("margarita.jpg")
-user4.avatar_file.attach(io: file, filename: "margarita.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/margarita.jpg")
+user4.photo.attach(io: file, filename: "margarita.jpg", content_type: "image/jpg")
 user4.save
 
 user5 = User.create!(
@@ -65,8 +65,8 @@ user5 = User.create!(
   user_name: 'cowboy',
   comkey: 1111
 )
-file = URI.open("cris.jpg")
-user5.avatar_file.attach(io: file, filename: "cris.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/cris.jpg")
+user5.photo.attach(io: file, filename: "cris.jpg", content_type: "image/jpg")
 user5.save
 
 user6 = User.create!(
@@ -76,8 +76,8 @@ user6 = User.create!(
   user_name: 'pingpongmaster',
   comkey: 1111
 )
-file = URI.open("alfredo.jpg")
-user6.avatar_file.attach(io: file, filename: "alfredo.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/alfredo.jpg")
+user6.photo.attach(io: file, filename: "alfredo.jpg", content_type: "image/jpg")
 user6.save
 
 user7 = User.create!(
@@ -87,8 +87,8 @@ user7 = User.create!(
   user_name: 'cheeselover',
   comkey: 1111
 )
-file = URI.open("mateo.jpg")
-user7.avatar_file.attach(io: file, filename: "mateo.jpg", content_type: "image/jpg")
+file = URI.open("./app/assets/images/mateo.jpg")
+user7.photo.attach(io: file, filename: "mateo.jpg", content_type: "image/jpg")
 user7.save
 
 
