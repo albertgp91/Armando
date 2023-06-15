@@ -8,19 +8,23 @@
   </div>
   <div class="container">
     <div class="row align-items-center">
-      <% @letters.each do |letter| %>
-      <div class="col-12 mb-4">
-        <%= link_to letter_path(letter), class: "text-decoration-none" do %>
-        <div class="p3 shadow letter_card card-round mx-auto">
-          <div>
-            <b><%= letter.user.full_name %></b>
+      <% if @letters.present? %>
+        <% @letters.each do |letter| %>
+          <div class="col-12 mb-4">
+            <%= link_to letter_path(letter), class: "text-decoration-none" do %>
+              <div class="p3 shadow letter_card card-round mx-auto">
+                <div>
+                  <b><%= letter.user.full_name %></b>
+                </div>
+                <div>
+                  <%= letter.subject %></p>
+                </div>
+              </div>
+            <% end %>
           </div>
-          <div>
-            <%= letter.subject %></p>
-          </div>
-        </div>
         <% end %>
-      </div>
+      <% else %>
+        <p class="text-center">You have no letters.</p>
       <% end %>
     </div>
   </div>
