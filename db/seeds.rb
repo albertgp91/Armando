@@ -21,8 +21,8 @@ user1 = User.create!(
   comkey: 1111,
 )
 file = URI.open("miguel.jpg")
-goat_1.avatar_file.attach(io: file, filename: "miguel.jpeg", content_type: "image/jpeg")
-goat_1.save
+user1.avatar_file.attach(io: file, filename: "miguel.jpg", content_type: "image/jpg")
+user1.save
 
 user2 = User.create!(
   email: 'fabien@neverland.com',
@@ -32,8 +32,8 @@ user2 = User.create!(
   comkey: 1111
 )
 file = URI.open("fabien.jpg")
-goat_1.avatar_file.attach(io: file, filename: "fabien.jpeg", content_type: "image/jpeg")
-goat_1.save
+user2.avatar_file.attach(io: file, filename: "fabien.jpg", content_type: "image/jpg")
+user2.save
 
 user3 = User.create!(
   email: 'ana@neverland.com',
@@ -44,8 +44,8 @@ user3 = User.create!(
   admin: true
 )
 file = URI.open("anna.jpg")
-goat_1.avatar_file.attach(io: file, filename: "ana.jpeg", content_type: "image/jpeg")
-goat_1.save
+user3.avatar_file.attach(io: file, filename: "ana.jpg", content_type: "image/jpg")
+user3.save
 
 user4 = User.create!(
   email: 'margarita@neverland.com',
@@ -55,8 +55,8 @@ user4 = User.create!(
   comkey: 1111
 )
 file = URI.open("margarita.jpg")
-goat_1.avatar_file.attach(io: file, filename: "margarita.jpeg", content_type: "image/jpeg")
-goat_1.save
+user4.avatar_file.attach(io: file, filename: "margarita.jpg", content_type: "image/jpg")
+user4.save
 
 user5 = User.create!(
   email: 'cris@neverland.com',
@@ -66,8 +66,8 @@ user5 = User.create!(
   comkey: 1111
 )
 file = URI.open("cris.jpg")
-goat_1.avatar_file.attach(io: file, filename: "cris.jpeg", content_type: "image/jpeg")
-goat_1.save
+user5.avatar_file.attach(io: file, filename: "cris.jpg", content_type: "image/jpg")
+user5.save
 
 user6 = User.create!(
   email: 'alfredo@neverland.com',
@@ -77,8 +77,8 @@ user6 = User.create!(
   comkey: 1111
 )
 file = URI.open("alfredo.jpg")
-goat_1.avatar_file.attach(io: file, filename: "alfredo.jpeg", content_type: "image/jpeg")
-goat_1.save
+user6.avatar_file.attach(io: file, filename: "alfredo.jpg", content_type: "image/jpg")
+user6.save
 
 user7 = User.create!(
   email: 'mateo@neverland.com',
@@ -88,8 +88,8 @@ user7 = User.create!(
   comkey: 1111
 )
 file = URI.open("mateo.jpg")
-goat_1.avatar_file.attach(io: file, filename: "mateo.jpeg", content_type: "image/jpeg")
-goat_1.save
+user7.avatar_file.attach(io: file, filename: "mateo.jpg", content_type: "image/jpg")
+user7.save
 
 
 puts "Creating letters..."
