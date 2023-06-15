@@ -10,7 +10,7 @@
                 <% if @user.avatar_file.present? %>
                   <%= image_tag @user.avatar_file, class: "avatar" %>
                 <% else %>
-                 <%= image_tag "profile_placeholder.jpg", class: "avatar" %>
+                 <%= image_tag "profile_placeholde", class: "avatar" %>
                 <% end %>
               <% end %>
             </span>
@@ -19,21 +19,18 @@
         </h1>
         <div class="row justify-content-center">
           <div class= "d-flex align-items-center p-3">
-            <h4 class="profile-header"> Name:</h4>
+            <h4 class="profile-header"> Name</h4>
             <p class= "info">
             <%= @user.user_name %>
             </p>
           </div>
+        </div>
+        <div class="row justify-content-center">
           <div class= "d-flex align-items-center p-3">
-            <h4 class="profile-header">Email:</h4>
+            <h4 class="profile-header">Email</h4>
             <p class= "info">
             <%= @user.email %>
             </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class= "d-flex justify-content-center p-3">
-            <%= link_to "Edit my profile",edit_user_registration_path, class:"btn-main-edit" %>
           </div>
         </div>
 
@@ -52,7 +49,7 @@
 
         <div class="row justify-content-center">
           <div class= "d-flex justify-content-center p-3">
-
+            <%= link_to "Edit my profile",edit_user_registration_path, class:"btn-main-edit" %>
             <%= link_to "Change my receiving letter day",receiving_day_path, class:"btn-main-edit" %>
           </div>
         </div>
