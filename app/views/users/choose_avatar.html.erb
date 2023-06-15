@@ -5,11 +5,11 @@
   </h1>
 
   <div data-controller="avatar">
-    <div class="yellow-box shadow p-5 border-image d-flex gap-5 justify-content-center">
-      <%= image_tag "addiction.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "addiction.png" } %>
-      <%= image_tag "bird.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "bird.png" } %>
-      <%= image_tag "letterbox.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "letterbox.png" } %>
-      <%= image_tag "pub.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "pub.png" } %>
+    <div class="shadow py-5 px-5 border-image letter-bg d-flex gap-5 justify-content-center">
+      <%= image_tag "profile_placeholder.jpg", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "profile_placeholder.jpg" } %>
+      <%= image_tag "zazu1.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "zazu1.png" } %>
+      <%= image_tag "mushu1.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "mushu1.png" } %>
+      <%= image_tag "piolin1.jpg", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "piolin1.jpg" } %>
     </div>
 
     <%= simple_form_for(current_user, url: upload_avatar_user_path(current_user), html: { method: :patch }) do |f| %>
