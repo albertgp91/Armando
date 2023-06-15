@@ -1,82 +1,86 @@
-<html>
+<div class="title position-relative">
+  <%= link_to "#more-info", class: "position-absolute more-info-btn" do %>
+    <i class="fa-solid fa-chevron-down text-decoration-underline"></i> See more
+  <% end %>
+  <div class="container">
+      <div class="row justify-content-center gap-5 mb-5">
+        <div class="col-10">
+          <h1 class="super-title my-5">
+            The <span class="underline">first</span> messaging platform for kids
+          </h1>
 
-  <div class="title position-relative">
-    <%= link_to "#more-info", class: "position-absolute more-info-btn" do %>
-      <i class="fa-solid fa-chevron-down text-decoration-underline"></i> See more
-    <% end %>
-    <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="title-ban mt-5"><h1><b>The first messaging platform for kids </h1></b>
-              <h2 style="color: #DAA520	; font: size 300px;"> Armando is designed to empower your children to connect with their friends online in a beneficial way that enriches their lives</h2>
-            </div>
-          </div>
+          <h2 class="super-lead">
+            Armando is designed to empower your children to connect with their friends online
+            in a beneficial way that enriches their lives
+          </h2>
         </div>
       </div>
-        <% if current_user %>
-        <!-- User is logged in, so hide the button -->
-        <!-- Add your logged-in user logic or redirect to appropriate page -->
-        <% else %>
-          <div class="btn-account mb-5">
-            <%= link_to "Create an account", new_user_registration_path, class: "btn-main shadow" %>
-          </div>
-        <% end %>
-  </div>
-        </div>
-  <div class="benefit1">
-    <div class="row">
-        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-          <%= image_tag "exited-father.jpg", height: 300, width: 380, class: "border-image shadow" %>
-        </div>
-        <div class="align-items-start col-5 d-flex justify-content-center flex-column">
-          <h2><b>Safety first</b></h2>
-          <h3>Unlike other messaging and social media platforms, connections with your children are only possbile with your approval.</h3>
-        </div>
     </div>
-  </div>
 
-  <div class="benefit2">
-    <div class="row">
-        <div class="align-items-start col-6 d-flex justify-content-center flex-column ml-4 align-text-center">
-          <h2><b>Notification detox</b></h2>
-          <h3>Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages once a week at their chosen time.</h3>
-        </div>
-        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-          <%= image_tag "cheerful-girl.jpg", height: 300, width: 380, class: "border-image shadow" %>
-        </div>
-    </div>
+    <% if !current_user %>
+      <div class="btn-account mb-5">
+        <%= link_to "Create an account", new_user_registration_path, class: "btn-main shadow" %>
+      </div>
+    <% end %>
   </div>
-  <div class=" benefit3">
-    <div class="row py-5">
-        <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-          <%= image_tag "single-mother.jpg", height: 300, width: 380, class: "border-image shadow" %>
-        </div>
-        <div class="align-items-start col-5 d-flex justify-content-center flex-column">
-          <h2><b>Advertising free</b></h2>
-          <h3>Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content.</h3>
-        </div>
-    </div>
-  </div>
+</div>
 
-  <div class="benefit4">
-    <div class="row ">
-      <h2 class="text-center pb-5 mt-5"><p><b>How does it work?</b></p></h2>
-              <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-                <%= image_tag "tablet-girl.jpg", height: 300, width: 380, class: "border-image shadow" %>
-              </div>
-                  <div class="col-5 d-flex-column align-items-center">
+<div class="benefit1">
+  <div class="row">
+      <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+        <%= image_tag "exited-father.jpg", height: 300, width: 380, class: "border-image shadow" %>
+      </div>
+      <div class="align-items-start col-5 d-flex justify-content-center flex-column">
+        <h2><b>Safety first</b></h2>
+        <h3>Unlike other messaging and social media platforms, connections with your children are only possbile with your approval.</h3>
+      </div>
+  </div>
+</div>
 
-                    <li>Create an account</li>
-                    <li>Choose your avatar</li>
-                    <li>Choose when to receive your letters</li>
-                    <li>Choose your communication key</li>
-                    <li>Send your first letter!</li>
-                            <div class="pt-5">
-                              <%= link_to "Create an account", new_user_registration_path, class: "btn-main-edit" %>
-                            </div>
-                  </div>
+<div class="benefit2">
+  <div class="row">
+      <div class="align-items-start col-6 d-flex justify-content-center flex-column ml-4 align-text-center">
+        <h2><b>Notification detox</b></h2>
+        <h3>Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages once a week at their chosen time.</h3>
+      </div>
+      <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+        <%= image_tag "cheerful-girl.jpg", height: 300, width: 380, class: "border-image shadow" %>
+      </div>
+  </div>
+</div>
+
+<div class=" benefit3">
+  <div class="row py-5">
+      <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+        <%= image_tag "single-mother.jpg", height: 300, width: 380, class: "border-image shadow" %>
+      </div>
+      <div class="align-items-start col-5 d-flex justify-content-center flex-column">
+        <h2><b>Advertising free</b></h2>
+        <h3>Your children will be shielded from any advertising exposure, thereby ensuring their minds are protected from unsolicited content.</h3>
+      </div>
+  </div>
+</div>
+
+<div class="benefit4">
+  <div class="row ">
+    <h2 class="text-center pb-5 mt-5"><p><b>How does it work?</b></p></h2>
+    <div class="align-items-center col-6 d-flex justify-content-center flex-column">
+      <%= image_tag "tablet-girl.jpg", height: 300, width: 380, class: "border-image shadow" %>
+    </div>
+
+    <div class="col-5 d-flex-column align-items-center">
+      <li>Create an account</li>
+      <li>Choose your avatar</li>
+      <li>Choose when to receive your letters</li>
+      <li>Choose your communication key</li>
+      <li>Send your first letter!</li>
+
+      <div class="pt-5">
+        <%= link_to "Create an account", new_user_registration_path, class: "btn-main-edit" %>
+      </div>
     </div>
   </div>
+</div>
 
 <div class="footer">
  <div class="footer-links">
@@ -91,5 +95,3 @@
   </div>
 </div>
 
-
- </html>

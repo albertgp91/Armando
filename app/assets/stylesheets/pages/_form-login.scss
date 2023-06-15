@@ -1,17 +1,16 @@
-
 .form-login {
-  background: #F6F0FF;
+  background: #f6f0ff;
   padding: 10px 20px;
   margin-bottom: 16px;
   border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   color: black;
 }
 
 .login {
-border-radius: 10px;
-margin: 20px;
-  }
+  border-radius: 10px;
+  margin: 20px;
+}
 
 .links {
   display: flex;
@@ -36,7 +35,12 @@ margin: 20px;
 }
 
 .nav-search-button {
-  border-radius: 0px 15px 15px 0px !important;
+  border-radius: 0px 15px 15px 0px;
+
+  &:hover {
+    color: white;
+    background-color: transparentize(white, 0.7);
+  }
 }
 
 .height-40 {

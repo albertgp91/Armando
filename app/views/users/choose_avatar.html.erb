@@ -1,11 +1,11 @@
 <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
 
   <h1 class="text-center text-primary letter_title py-5">
-    <i class="fa-solid fa-circle-1"></i> Choose your avatar
+    Choose your avatar
   </h1>
 
   <div data-controller="avatar">
-    <div class="shadow py-5 px-5 border-image letter-bg d-flex gap-5 justify-content-center">
+    <div class="shadow p-5 rounded-bottom-4 yellow-box d-flex gap-5 justify-content-center">
       <%= image_tag "profile_placeholder.jpg", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "profile_placeholder.jpg" } %>
       <%= image_tag "zazu1.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "zazu1.png" } %>
       <%= image_tag "mushu1.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "mushu1.png" } %>
