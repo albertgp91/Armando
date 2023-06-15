@@ -9,6 +9,7 @@
           <%= form_with url: users_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query,
                 params[:query],
+                autocomplete: :off,
                 class: "form-control custom-borders height-40",
                 placeholder: "Search a friend"
                 %>
