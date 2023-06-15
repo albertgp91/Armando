@@ -1,8 +1,8 @@
 .letter_card {
   padding: 15px;
-  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-family: 'Nunito', 'Helvetica', 'sans-serif';
   font-size: 20px;
-  color: #FF7F50;
+  color: #ff7f50;
   background-color: #fff3e1;
 }
 
@@ -11,7 +11,9 @@
 }
 
 .letter_title {
-  color: #d44a1e;
+  color: $brand-color;
+  font-weight: bold;
+  font-size: 3.5em;
 }
 
 .list-group {
@@ -21,14 +23,14 @@
 }
 
 .list-group-item {
-  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-family: 'Nunito', 'Helvetica', 'sans-serif';
   font-weight: 700;
   font-size: 23px;
-  color: #FF7F50 !important;
+  color: #ff7f50 !important;
 }
 
-input#letter_photo{
-  color: #FF7F50;
+input#letter_photo {
+  color: #ff7f50;
 }
 
 .far {
