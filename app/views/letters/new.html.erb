@@ -3,7 +3,8 @@
 <div class="container">
   <%= simple_form_for(@letter) do |f| %>
     <div class="shadow yellow-box p-5">
-      <div class="form-inputs list-group-item" >
+      <div class="form-inputs list-group-item"
+        style="background-image: url(<%= image_path('stamp.png') %>); background-size: 138px; background-position-x: right;background-repeat: no-repeat">
         <div class="d-flex mb-3 gap-3 align-items-center">
           <label class="form-label fst-italic">From:</label>
           <input type="text" class="bg-transparent fst-italic border-0 border-2 border-bottom text-primary border-primary"
