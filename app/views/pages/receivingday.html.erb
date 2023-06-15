@@ -1,37 +1,37 @@
-<div class="body-color" style="min-height: 100vh">
-  <div class="container py-5 text-center">
-    <div class="rec-container py-5 px-5">
-      <%= simple_form_for(current_user) do |f| %>
-        <div class="container pb-3">
-          <h1 class= "letter_title">Which day would you like to receive your letters ?</h1>
-        </div>
-        <div class="form_inputs">
-          <%= f.input :receiving_day, as: :radio_buttons, label: false, include_hidden: false,
-          collection: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          wrapper_html: { class:"d-flex gap-2 justify-content-center" },
+<div class="container">
+  <h1 class= "letter_title py-5 text-center">
+    When do you like to receive letters ?
+  </h1>
+
+  <%= simple_form_for(current_user, html_options: { novalidate: true }) do |f| %>
+    <div class="yellow-box p-5">
+      <div class="form_inputs">
+        <%= f.input :receiving_day, as: :radio_buttons, label: false, include_hidden: false,
+          collection: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          wrapper_html: { class: "d-flex gap-2 justify-content-center" },
           item_wrapper_class: "text-sm",
           label_html: { class:"col-form-label" },
-          input_html: { class:"form-text-size form-wrapper form-item form-selector",
-            style: "display: none;" } %>
-        </div>
-        <div class="container rec-container py-5 px-10 mt-5">
-          <div class="row justify-content-center">
-            <h1 class="letter_title mb-4">At which time ?</h1>
+          input_html: {
+            class:"form-text-ssize form-wrapper form-item form-selector",
+            style: "display: none;"
+          } %>
+      </div>
 
-            <div class="col-md-5 col-lg-12 justify-items-center">
-              <div class="form_inputs">
-                <%= f.input :receiving_time, as: :time, label: false, input_html: { class:"small-input" } %>
-              </div>
+      <div class="row justify-content-center">
+        <h1 class="my-4 text-primary text-center">At which time ?</h1>
 
-              <div class="form-actions pt-3">
-                <div class="Confirm ">
-                  <%= f.submit "Let's go!", class:"btn-main-edit mt-3" %>
-                </div>
-              </div>
-            </div>
+        <div class="col-3 justify-items-center">
+          <div class="form_inputs">
+            <%= f.input :receiving_time, as: :time, label: false, input_html: { class: "fs-5" } %>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
-  </div>
+
+    <div class="text-center form-actions pt-5">
+      <button type="submit" class="btn-main">
+        Let's go! <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  <% end %>
 </div>

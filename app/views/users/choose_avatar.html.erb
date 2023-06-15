@@ -1,30 +1,27 @@
-<div class="container-fluid d-flex flex-column align-items-center justify-content-center pt-5">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center">
 
-    <div class="row pb-5">
-        <h1>(1/3) Upload your picture or choose your avatar</h1>
+  <h1 class="text-center text-primary letter_title py-5">
+    <i class="fa-solid fa-circle-1"></i> Choose your avatar
+  </h1>
+
+  <div data-controller="avatar">
+    <div class="yellow-box shadow p-5 border-image d-flex gap-5 justify-content-center">
+      <%= image_tag "addiction.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "addiction.png" } %>
+      <%= image_tag "bird.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "bird.png" } %>
+      <%= image_tag "letterbox.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "letterbox.png" } %>
+      <%= image_tag "pub.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "pub.png" } %>
     </div>
-        <div class="", data-controller="avatar">
-          <div class="shadow py-5 px-5 border-image letter-bg d-flex gap-5 justify-content-center">
-            <%= image_tag "addiction.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "addiction.png" } %>
-            <%= image_tag "bird.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "bird.png" } %>
-            <%= image_tag "letterbox.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "letterbox.png" } %>
-            <%= image_tag "pub.png", width: 175, height: 175, class: "rounded-circle avatar-item", data: { action: "click->avatar#choose", avatar_target: "img", avatar_path: "pub.png" } %>
-          </div>
 
-          <%= simple_form_for(current_user, url: upload_avatar_user_path(current_user), html: { method: :patch }) do |f| %>
-            <div class="form-inputs">
-              <%= f.input :avatar_file,
-                          as: :hidden,
-                          autofocus: true,
-                          input_html: {
-                            data: {
-                              avatar_target: "input"
-                            }
-                          } %>
-            </div>
+    <%= simple_form_for(current_user, url: upload_avatar_user_path(current_user), html: { method: :patch }) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :avatar_file, as: :hidden, autofocus: true, input_html: { data: { avatar_target: "input" } } %>
+      </div>
 
-            <div class="form-actions text-center pt-3">
-              <%= f.button :submit, "     Next     ", class: "btn-main" %>
-            </div>
-          <% end %>
-        </div>
+      <div class="form-actions text-center pt-5">
+        <button type="submit" class="btn-main">
+          Next <i class="ms-2 fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    <% end %>
+ </div>
+</div>

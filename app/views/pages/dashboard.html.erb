@@ -1,52 +1,47 @@
-<div class="body-color">
-<div class="container-fluid py-5">
- <div class="col-12 text-center">
-        <h1 class="letter_title">What would you like to do ?</h1>
-      </div>
-</div>
+<h1 class="letter_title py-5 text-center">What would you like to do ?</h1>
 
 <div class="container">
-<div class="row">
+  <div class="row">
+    <div class="col-4">
+      <%= link_to new_letter_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+        <div class="rounded-4 shadow">
+          <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
+            <%= image_tag "sendletter.png", height: 170, width: 170 %>
+          </div>
 
-<div class="col-12 col-md-4 mb-5 mb-md-0">
-<%= link_to new_letter_path(@letter), class: 'text-decoration-none' do %>
-<div class="cardhome">
-<div class="card-body">
-<%= image_tag "sendletter.png", height: 120, width: 120 %>
-</div>
-<div class="card-footer">
-<span>Send a letter</span>
-</div>
-</div>
-<% end %>
-</div>
+          <div class="card-btn text-bg-primary text-white rounded-bottom-4 p-3 text-center">
+            Send a letter
+          </div>
+        </div>
+      <% end %>
+    </div>
 
-<div class="col-12 col-md-4 mb-5 mb-md-0">
-<%= link_to inbox_path(@letter), class: 'text-decoration-none' do %>
-<div class="cardhome">
-<div class="card-body">
-<%= image_tag "letterbox.png", height: 120, width: 100 %>
-</div>
-<div class="card-footer">
-<span>Your letterbox</span>
-</div>
-</div>
-<% end %>
-</div>
+    <div class="col-4">
+      <%= link_to inbox_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+        <div class="rounded-4 shadow">
+          <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
+            <%= image_tag "letterbox.png", height: 496 * 0.3, width: 444 * 0.3 %>
+          </div>
 
-<div class="col-12 col-md-4 mb-5 mb-md-0">
-<%= link_to sent_path(@letter), class: 'text-decoration-none' do %>
-<div class="cardhome">
-<div class="card-body">
-<%= image_tag "lettersent.png", height: 120, width: 150 %>
-</div>
-<div class="card-footer">
-<span>Letters sent</span>
-</div>
-</div>
-<% end %>
-</div>
+          <div class="card-btn text-bg-primary text-white rounded-bottom-4 p-3 text-center">
+            Your letterbox
+          </div>
+        </div>
+      <% end %>
+    </div>
 
-</div>
-</div>
+    <div class="col-4">
+      <%= link_to sent_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+        <div class="rounded-4 shadow">
+          <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
+            <%= image_tag "lettersent.png", height: 382 * 0.3, width: 666 * 0.3 %>
+          </div>
+
+          <div class="card-btn text-bg-primary text-white rounded-bottom-4 p-3 text-center">
+            Letters sent
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

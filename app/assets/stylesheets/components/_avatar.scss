@@ -1,4 +1,3 @@
-
 .avatar-large {
   width: 56px;
   border-radius: 50%;
@@ -6,24 +5,26 @@
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border: white 1px solid;
 }
 .avatar-square {
   width: 40px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border: white 1px solid;
 }
 
 .avatar-item {
   cursor: pointer;
+  border: 7px solid transparent;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.2);
   }
-}
 
-.chosen-avatar {
-  border: 7px solid $brand-color;
-  transform: scale(1.2);
+  &.chosen-avatar {
+    border: 7px solid $brand-color;
+    transform: scale(1.2);
+  }
 }

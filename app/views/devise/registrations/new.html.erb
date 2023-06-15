@@ -21,7 +21,7 @@
                       input_html: { autocomplete: "full_name" }%>
           <%= f.input :password,
                       required: true,
-                      hint_class: "form-text text-muted",
+                      hint_html: { class: 'fs-6 opacity-50 text-secondary' },
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
         </div>

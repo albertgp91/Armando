@@ -1,29 +1,36 @@
-<div class="bg-#fff3c9" style="min-height: 100vh">
-  <div class="container-fluid py-5">
-    <div class="row justify-content-center">
-      <h1 class="mb-3 letter_title text-center pb-3">Write your letter below:</h1>
-        <div class="card shadow col-md-8 p-5 letter-bg">
+<h1 class="letter_title text-center py-5">Write your letter below</h1>
 
-          <%= simple_form_for(@letter) do |f| %>
-
-            <div class="form-inputs list-group-item" >
-              <%= f.association :receiver,
-              collection: User.where.not(id: current_user.id).order(:full_name),
-               label_method: :full_name,
-               include_hidden: false,
-               include_blank: false %>
-              <%= f.input :subject %>
-              <%= "User will receive your letter" %>
-              <%= f.input :content %>
-              <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-            </div>
-            <div class="form-actions text-center pt-4">
-              <%= f.submit "Send Letter", class: "btn-main" %>
-              <%= link_to "Cancel", inbox_path, class: "btn-secondary" %>
-            </div>
-          <% end %>
+<div class="container">
+  <%= simple_form_for(@letter) do |f| %>
+    <div class="shadow yellow-box p-5">
+      <div class="form-inputs list-group-item" >
+        <div class="d-flex mb-3 gap-3 align-items-center">
+          <label class="form-label fst-italic">From:</label>
+          <input type="text" class="bg-transparent fst-italic border-0 border-2 border-bottom text-primary border-primary"
+            disabled value="<%= current_user.full_name %>" />
         </div>
+
+        <%= f.association :receiver, collection: User.where.not(id: current_user.id).order(:full_name),
+          label_method: :full_name, required: false, label: 'To:',
+          wrapper_html: { class: 'd-flex gap-3 col-3 fst-italic align-items-center' },
+          include_hidden: false, include_blank: false,
+          input_html: { class: 'fs-4 bg-transparent fst-italic border-0 border-2 border-bottom border-primary'} %>
+
+        <%= f.input :subject, class: 'form-label', wrapper_html: { class: 'mt-5 pt-3 fst-italic d-flex flex-column'},
+          input_html: { class: 'bg-white border-2 text-primary border-primary' } %>
+
+        <%= f.input :content, as: :text, input_html: { class: 'bg-white border-2 text-primary border-primary', style: 'min-height: 200px' } %>
+
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       </div>
     </div>
-  </div>
+
+    <div class="form-actions text-center pt-5 pb-5">
+      <button type="submit" class="btn-main">
+        Send Letter <i class="fa-solid fa-paper-plane"></i>
+      </button>
+
+      <%= link_to "Cancel", inbox_path, class: "btn-outline" %>
+    </div>
+  <% end %>
 </div>

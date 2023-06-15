@@ -1,14 +1,14 @@
-.form-text-size{
+.form-text-size {
   font-size: 20px;
 }
 
-.small-input{
+.small-input {
   width: 200px;
   height: 50px;
   font-size: 25px;
 }
 
-.col-form-label{
+.col-form-label {
   display: none;
 }
 
@@ -16,50 +16,71 @@
   font-size: 18px !important;
 }
 
-.user_receiving_day {
-
-
-  .form-check-input.is-valid ~ .form-check-label {
-    color: black;
-  }
-}
-
-.form-wrapper{
+.form-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.form-item{
+.form-item {
   flex: 0 0 30%;
 }
 
-.form.selector{
+.form.selector {
   position: absolute;
   transform: scale(0);
 }
 
+.user_receiving_day {
+  .form-check-input.is-valid ~ .form-check-label {
+    color: $brand-color;
+  }
+
+  .form-check-input:checked.is-valid ~ .form-check-label {
+    color: white;
+  }
+
+  .form-check-input:checked:hover.is-valid ~ .form-check-label {
+    color: white;
+  }
+}
+
 .form-selector + label {
-  display: block;
   cursor: pointer;
+  display: block;
   box-sizing: border-box;
-  width: 100%;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px;
   border-radius: 50px;
-  background-color: #F3D2AB;
+  background-color: $brand-color;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  border: 3px solid $brand-color;
+  background-color: white;
+
+  &:hover {
+    color: white;
+    background-color: transparentize($brand-color, 0.6);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+  }
 }
 
 .form-selector:checked + label {
+  background-color: $brand-color;
+  border: 3px solid $brand-color;
 }
 
-.rec-container{
+.rec-container {
   background-color: #ffffff;
   border-radius: 20px;
 }
 
-.body-color{
-  background-color: #FCF2E9;
+.body-color {
+  background-color: #fcf2e9;
 }
