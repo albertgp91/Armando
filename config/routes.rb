@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  require "sidekiq/web"
+  # require "sidekiq/web"
 
   get 'user/update'
   devise_for :users, controllers: { registrations: "registrations" }
