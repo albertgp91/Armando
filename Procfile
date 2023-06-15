@@ -1,2 +1,2 @@
-web: bundle exec puma -C config/puma.rb
-worker: bundle exec sidekiq -C config/sidekiq.yml
+web: rails server
+worker: bundle exec good_job start
