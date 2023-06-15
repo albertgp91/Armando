@@ -20,6 +20,7 @@
 
 .title-ban{
 background-color: transparent;
+
 }
 
 .benefit {
@@ -38,7 +39,7 @@ background-color: transparent;
 
 
 .benefit1 {
-  height: 280px;
+  height: 420px;
   background-color: #f7a15b ;
   padding-top: 0px;
   font-family: "Nunito", "Helvetica", "sans-serif";
@@ -49,18 +50,19 @@ background-color: transparent;
 }
 
 .benefit2{
-  height: 280px;
-  background-color: #d38b26;
+  height: 420px;
+  background-color: #FDEED9 ;
   padding-top: 0px;
   font-family: "Nunito", "Helvetica", "sans-serif";
   font-size: small;
   display: flex;
   justify-content: space-between;
   color:#f7a15b ;
+  margin-left: 20px;
 }
 
 .benefit3 {
-  height: 280px;
+  height: 420px;
   background-color: #f7a15b ;
   padding-top: 0px;
   font-family: "Nunito", "Helvetica", "sans-serif";
@@ -72,15 +74,23 @@ background-color: transparent;
 }
 
 .benefit4{
-  height: 280px;
+  height: 470px;
   background-color: #fdeed9;
   padding-top: 0px;
   font-family: "Nunito", "Helvetica", "sans-serif";
-  font-size: small;
+  font-size: medium;
   display: flex;
   justify-content: space-between;
   color:#f7a15b ;
 }
+
+.benefit5 {
+background: #d44a1e;
+color:#FDEED9
+
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
 
 .word {
