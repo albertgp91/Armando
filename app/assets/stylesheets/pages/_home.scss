@@ -84,10 +84,35 @@ background-color: transparent;
   color:#f7a15b ;
 }
 
-.benefit5 {
-background: #d44a1e;
-color:#FDEED9
+.footer{
+  height: 100px;
+  background-color: #d44a1e;
+  padding-top: 0px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  color:#FDEED9 ;
+  background-image: asset-url('triangle.png');
+  background-repeat: repeat-x;
+  background-size: 10px;
+align-items: center;
 
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
 }
 
 
