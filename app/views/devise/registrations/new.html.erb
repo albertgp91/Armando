@@ -2,7 +2,7 @@
   <div class="row col-6 justify-content-center">
     <h1 class="text-center text-primary py-5 letter_title">Sign up</h1>
 
-    <div class="yellow-box container align-items-center-flex flex-column shadow px-5 py-5">
+    <div class="yellow-box container align-items-center-flex flex-column shadow p-5">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
         <%= f.error_notification %>
 
@@ -10,17 +10,14 @@
           <%= f.input :email,
                       required: true,
                       autofocus: true,
-                      autocomplete: :off,
                       input_html: { autocomplete: "email" }%>
           <%= f.input :user_name,
                       required: true,
                       autofocus: true,
-                      autocomplete: :off,
                       input_html: { autocomplete: "user_name" }%>
           <%= f.input :full_name,
                       required: true,
                       autofocus: true,
-                      autocomplete: :off,
                       input_html: { autocomplete: "full_name" }%>
           <%= f.input :password,
                       required: true,
