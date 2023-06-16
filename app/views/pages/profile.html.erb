@@ -1,15 +1,16 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <h1 class="py-5 letter_title" style="text-align: center">My profile</h1>
+    <div class="text-center" style="margin-top:-30px">
+      <%= link_to :back, class: 'btn-main mb-5' do %>
+        <i class="fa-solid fa-reply me-2"></i> Back
+      <% end %>
+    </div>
 
     <div class="yellow-box shadow col-md-8 p-5 mb-5 rounded-bottom-4 letter-bg d-flex flex-column align-items-center">
       <span class="hovertext" data-hover="Change your avatar">
         <%= link_to avatar_path do %>
-          <% if @user.avatar_file.present? %>
-            <%= image_tag @user.avatar_file, width: 200, class: 'rounded-circle' %>
-          <% else %>
-            <%= image_tag "profile_placeholder" %>
-          <% end %>
+          <%= user_avatar(current_user, width: 200)%>
         <% end %>
       </span>
 

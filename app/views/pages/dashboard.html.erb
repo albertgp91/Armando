@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <%= link_to new_letter_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+      <%= link_to new_letter_path, class: 'mx-2 d-block text-decoration-none home-card card-animated' do %>
         <div class="rounded-4 shadow">
           <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
             <%= image_tag "lettersend-new.png", height: 200, width: 200 %>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-4">
-      <%= link_to inbox_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+      <%= link_to inbox_path, class: 'mx-2 d-block text-decoration-none home-card card-animated' do %>
         <div class="rounded-4 shadow">
           <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
             <%= image_tag "letterbox-new.png", height: 200, width: 200 %>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="col-4">
-      <%= link_to sent_path(@letter), class: 'mx-2 d-block text-decoration-none home-card' do %>
+      <%= link_to sent_path, class: 'mx-2 d-block text-decoration-none home-card card-animated' do %>
         <div class="rounded-4 shadow">
           <div class="rounded-top-4 align-items-center card-min-height d-flex justify-content-center">
             <%= image_tag "lettersent-new.png", height: 200, width: 200 %>

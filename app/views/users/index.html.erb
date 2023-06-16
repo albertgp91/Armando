@@ -1,20 +1,16 @@
-<div class="body-color">
-<div class="container pt-5" style="min-height: 100vh">
+<div class="container">
   <% if @users.present? %>
-    <h1 class="letter_title text-center">The friend you're looking for</h1>
-    <div class="row justify-content-center pt-5">
+    <h1 class="letter_title text-center py-5">The friend you're looking for</h1>
+
+    <div class="row justify-content-center">
       <% @users.each do |user| %>
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="col-4">
           <%= link_to user_path(user), class: "text-decoration-none" do %>
-            <div class="card h-100 shadow">
-               <div class="card-body-friends text-center pb-3">
-                <% if user.avatar_file.present? %>
-                  <%=image_tag current_user.avatar_file, class: "avatar-user mt-3" %>
-                <% else %>
-                  <%= image_tag "profile_placeholder.jpg", class: "avatar-user mt-3 rounded-circle" %>
-                <% end %>
-                <p class="mt-2"><%= user.user_name %></p>
-              </div>
+            <div class="yellow-box mb-5 mx-2 card-animated p-4 no-bg shadow text-center rounded-4">
+              <%= user_avatar(user, width: 230) %>
+              <h3 class="pt-3">
+                <%= user.user_name %>
+              </h3>
             </div>
           <% end %>
         </div>
@@ -22,10 +18,11 @@
     </div>
   <%else%>
     <h1 class="letter_title text-center pt-5">Sorry, this username does not exist. </h1>
-
   <% end %>
-  <div>
-       <%= link_to "Back to the dashboard", :back, class: "row justify-content-center pt-5 text-dark" %>
-    </div>
-</div>
+
+  <div class="text-center">
+    <%= link_to :back, class: "btn-main" do %>
+      <i class="fa-solid fa-reply me-2"></i> Back to the dashboard
+    <% end %>
+  </div>
 </div>

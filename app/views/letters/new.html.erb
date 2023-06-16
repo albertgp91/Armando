@@ -1,4 +1,9 @@
 <h1 class="letter_title text-center py-5">Write your letter below</h1>
+<div class="text-center" style="margin-top:-30px">
+  <%= link_to :back, class: 'btn-main mb-5' do %>
+    <i class="fa-solid fa-reply me-2"></i> Back
+  <% end %>
+</div>
 
 <div class="container">
   <%= simple_form_for(@letter) do |f| %>

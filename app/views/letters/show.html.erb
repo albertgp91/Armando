@@ -1,42 +1,51 @@
-<div class="bg-bisque" style="min-height: 100vh">
   <div class="container-fluid py-5">
     <div class="row justify-content-center">
-        <div class="card col-8 shadow p-4 letter-bg">
-          <div class="container">
-              <div class="d-flex justify-content-between align-items-center my-4">
-                <h1 class="mb-0 letter_title">From: <%= @letter.user.full_name %></h1>
-                  <div>
-                    <%= link_to letter_path(@letter), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
-                        <i class="far fa-trash-alt"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <hr class="letter_spacer">
-            <div class="container">
-                    <div class="row v100">
-                      <ul class="list-group list-group-flush mb-2">
-                          <li class="list-group-item letter-field">Subject: <%=@letter.subject %></li>
-                          <li class="list-group-item letter-field">Letter: <%= @letter.content %></li>
-                      </ul>
-                        <% if @letter.photos.present?%>
-                            <%= @letter.photos.each do |photo| %>
-                            <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
-                            <% end %>
-                        <% else %>
-                        <% end %>
-                      </div>
-                  </div>
-                    <div class="row d-flex">
-                      <div class="card-body">
-                        <%= link_to "Reply this Letter", new_letter_path(@letter), class: "btn-main"%>
-                        <%= link_to "Go back", inbox_path, class: "btn-secondary"%>
-                      </div>
-                    </div>
-                </div>
+      <div class="yellow-box col-8 shadow p-4 rounded-4">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center my-4">
+            <div class="d-flex gap-3 flex-row">
+              <%= user_avatar(@letter.user, width: 100) %>
+
+              <div class="d-flex gap-2 flex-column">
+                <h3 class="text-primary">From: <%= @letter.user.full_name %></h3>
+                <h4 class="text-primary">Subject: <%= @letter.subject %></h4>
               </div>
             </div>
+            <%= link_to letter_path(@letter), class: 'btn-icon', data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          </div>
+
+          <hr class="text-primary">
+
+          <div class="container text-primary pt-3">
+            <p><%= @letter.content %></p>
+            <% if @letter.photos.present?%>
+              <%= @letter.photos.each do |photo| %>
+              <%= cl_image_tag @letter.photo.key, height: 400, crop: :fill %>
+            <% end %>
+            <% else %>
+            <% end %>
+
+            <div class="row">
+              <div class="col d-flex flex-row mt-5 gap-3 justify-content-end">
+                <% if @letter.user == current_user %>
+                  <%= link_to sent_path, class: "btn-outline" do %>
+                    <i class="fa-solid fa-reply me-2"></i> Back to sent messages
+                  <% end %>
+                <% else %>
+                  <%= link_to inbox_path, class: "btn-outline" do %>
+                    <i class="fa-solid fa-reply me-2"></i> Back to the inbox
+                  <% end %>
+                <% end %>
+
+                <%= link_to new_letter_path(@letter), class: "btn-main" do %>
+                  Reply <i class="fa-solid fa-paper-plane"></i>
+                <% end %>
+              </div>
+            <div>
           </div>
         </div>
+      </div>
     </div>
   </div>
-</div>

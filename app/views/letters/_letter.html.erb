@@ -1,0 +1,22 @@
+<div class="col-12 mb-4">
+  <%= link_to letter_path(letter), class: "text-decoration-none" do %>
+    <div class="yellow-box card-animated no-bg p-3 shadow card-round mx-auto">
+      <div class="d-flex flex-row gap-3">
+        <%= user_avatar(letter.user, width: 100) %>
+        <div class="flex-grow-1">
+          <div class="d-flex justify-content-between">
+            <p><strong>From:</strong> <%= letter.user.full_name %></p>
+            <small>
+              <i class="fa-regular fa-calendar"></i>
+              <%= letter.created_at.strftime('%d %b %Y') %>
+            </small>
+          </div>
+          <p><strong>Subject:</strong> <%= letter.subject %></p>
+          <p class="opacity-75"><%= truncate(letter.content, length: 50, separator: ' ') %></p>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -9,20 +9,18 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 200px;
-
 }
 
 .navbar-lewagon .nav-link {
-  color:#fff3c9;
-  font-family: monospace, "monaco", sans-serif;
+  color: #fff3c9;
+  font-family: monospace, 'monaco', sans-serif;
   font-size: large;
   font-style: normal;
 }
 
 .avatar {
- border: 2px solid #fff3c9;
- border-radius: 47%;
- width: 40px;
+  border: 2px solid #fff3c9;
+  width: 60px;
 }
 
 .nav-link {
@@ -32,14 +30,13 @@
 .dropdown-item {
   text-align: center !important;
   color: #d44a1e !important;
-  font-family: monospace, "monaco", sans-serif;
-  font-size:medium;
+  font-family: monospace, 'monaco', sans-serif;
+  font-size: medium;
   font-style: normal;
   background-color: #fff3c9 !important;
-
 }
 
-.dropdown-menu{
+.dropdown-menu {
   padding-top: 0px;
   padding-bottom: 0px;
   border-radius: 5px;

@@ -3,4 +3,8 @@
   background-color: $soft-yellow;
   background-repeat: repeat-x;
   background-size: 50px;
+
+  &.no-bg {
+    background-image: none;
+  }
 }
