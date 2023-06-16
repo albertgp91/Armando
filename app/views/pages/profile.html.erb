@@ -19,11 +19,12 @@
       </div>
 
       <div class="row text-center mt-2">
-        <h3><i class="fa-solid fa-envelope text-primary"></i> <%= @user.email %></h3>
+        <h3><i class="fa-solid fa-key"></i> Communication key - <%= @user.comkey %></h3>
       </div>
 
       <div class="row my-4">
         <h4 class="d-flex flex-row justify-content-center gap-2">
+          <i class="fa-regular fa-calendar"></i>
           <span>Receiving letters every</span>
           <span class= "info">
             <%= @user.receiving_day.first %>
