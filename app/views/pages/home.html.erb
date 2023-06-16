@@ -8,7 +8,6 @@
           <h1 class="super-title my-5">
             The <span class="underline">first</span> messaging platform for kids
           </h1>
-
           <h2 class="super-lead">
             Armando is designed to empower your children to connect with their friends online
             in a beneficial way that enriches their lives
@@ -28,7 +27,7 @@
 <div class="benefit1">
   <div class="row">
       <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-        <%= image_tag "home2.png", height: 350, class: "border-image shadow" %>
+        <%= image_tag "home2.png", height: 300, class: "border-image shadow" %>
       </div>
       <div class="align-items-start col-5 d-flex justify-content-center flex-column">
         <h2><b>Safety first</b></h2>
@@ -38,21 +37,21 @@
 </div>
 
 <div class="benefit2">
-  <div class="row py-5">
-      <div class="align-items-start col-5 d-flex justify-content-center flex-column ml-4 align-text-center">
+  <div class="row">
+      <div class="align-items-start col-6 d-flex justify-content-center flex-column">
         <h2><b>It's not addictive!</b></h2>
         <h3>Instead of receiving messages instantly, which can lead to addiction, your children will receive their messages once a week at their chosen time.</h3>
       </div>
-      <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-        <%= image_tag "home1.png", width: 380, class: "border-image shadow" %>
+      <div class="align-items-center col-5 d-flex justify-content-center flex-column">
+        <%= image_tag "home1.png", height: 300, class: "border-image shadow" %>
       </div>
   </div>
 </div>
 
 <div class=" benefit3">
-  <div class="row py-5">
+  <div class="row">
       <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-        <%= image_tag "home3.png", width: 380, class: "border-image shadow" %>
+        <%= image_tag "home3.png", height: 300, class: "border-image shadow" %>
       </div>
       <div class="align-items-start col-5 d-flex justify-content-center flex-column">
         <h2><b>Advertising free</b></h2>
@@ -63,20 +62,19 @@
 
 <div class="benefit4">
   <div class="row ">
-    <h2 class="text-center pb-5 mt-5"><p><b>How does it work?</b></p></h2>
-    <div class="align-items-center col-6 d-flex justify-content-center flex-column">
-      <%= image_tag "homebanner.png", width: 380, class: "border-image shadow" %>
+ <div class="align-items-center col-4 d-flex justify-content-center flex-column">
+      <%= image_tag "home6.png", width: 300, class: "border-image shadow" %>
     </div>
+    <div class="col-8 d-flex-column align-items-center">
+      <h2 class="text-center py-5"><p><b>How does it work?</b></p></h2>
+      <h3><li>Create an account</li></h3>
+      <h3><li>Choose your avatar</li></h3>
+      <h3><li>Choose when to receive your letters</li></h3>
+      <h3><li>Choose your communication key</li></h3>
+      <h3><li>Send your first letter!</li></h3>
 
-    <div class="col-5 d-flex-column align-items-center">
-      <li>Create an account</li>
-      <li>Choose your avatar</li>
-      <li>Choose when to receive your letters</li>
-      <li>Choose your communication key</li>
-      <li>Send your first letter!</li>
-
-      <div class="pt-5">
-        <%= link_to "Create an account", new_user_registration_path, class: "btn-main-edit" %>
+      <div class="py-5">
+        <%= link_to "Create an account", new_user_registration_path, class: "btn-main" %>
       </div>
     </div>
   </div>
