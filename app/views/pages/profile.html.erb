@@ -1,60 +1,43 @@
-<div class="body-color">
-<div class="bg-#fdeed9" style="min-height: 100vh">
-  <div class="container-fluid py-5">
-    <div class="row justify-content-center">
-      <div class="card shadow col-md-8 p-5 letter-bg ">
-        <h1 class="pb-4 letter_title" style="text-align: center" >My profile
-          <div>
-            <span class="hovertext" data-hover="Change your avatar">
-              <%= link_to avatar_path do %>
-                <% if @user.avatar_file.present? %>
-                  <%= image_tag @user.avatar_file,class: "avatar" %>
-                <% else %>
-                 <%= image_tag "profile_placeholder", class: "avatar" %>
-                <% end %>
-              <% end %>
-            </span>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h1 class="py-5 letter_title" style="text-align: center">My profile</h1>
 
-          </div>
-        </h1>
-        <div class="row justify-content-center">
-          <div class= "d-flex align-items-center p-3">
-            <h4 class="profile-header"> Name</h4>
-            <p class= "info">
-            <%= @user.user_name %>
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class= "d-flex align-items-center p-3">
-            <h4 class="profile-header">Email</h4>
-            <p class= "info">
-            <%= @user.email %>
-            </p>
-          </div>
-        </div>
+    <div class="yellow-box shadow col-md-8 p-5 mb-5 rounded-bottom-4 letter-bg d-flex flex-column align-items-center">
+      <span class="hovertext" data-hover="Change your avatar">
+        <%= link_to avatar_path do %>
+          <% if @user.avatar_file.present? %>
+            <%= image_tag @user.avatar_file, width: 200, class: 'rounded-circle' %>
+          <% else %>
+            <%= image_tag "profile_placeholder" %>
+          <% end %>
+        <% end %>
+      </span>
 
-        <div class="row justify-content-center">
-          <div class= "d-flex align-items-center p-3">
-            <h4 class="profile-header">Your receiving letter day</h4>
-            <p class= "info">
-              <%= @user.receiving_day.first %>
-              </p>
-              <h4 class="profile-header">at</h4>
-              <p class= "info">
-              <%= @user.receiving_time.strftime("%H:%M") %>
-            </p>
-          </div>
-        </div>
+      <div class="row text-center mt-2">
+        <h1 class="text-primary"><%= @user.user_name %></h1>
+      </div>
 
-        <div class="row justify-content-center">
-          <div class= "d-flex justify-content-center p-3">
-            <%= link_to "Edit my profile",edit_user_registration_path, class:"btn-main-edit" %>
-            <%= link_to "Change my receiving letter day",receiving_day_path, class:"btn-main-edit" %>
-          </div>
+      <div class="row text-center mt-2">
+        <h3><i class="fa-solid fa-envelope text-primary"></i> <%= @user.email %></h3>
+      </div>
+
+      <div class="row my-4">
+        <h4 class="d-flex flex-row justify-content-center gap-2">
+          <span>Receiving letters every</span>
+          <span class= "info">
+            <%= @user.receiving_day.first %>
+          </span> at <span class= "info">
+            <%= @user.receiving_time.strftime("%H:%Mh") %>
+          </span>
+        </h4>
+      </div>
+
+      <div class="row">
+        <div class="d-flex flex-column justify-content-center gap-3 mt-4">
+          <%= link_to "Edit my profile",edit_user_registration_path, class:"btn-main" %>
+          <%= link_to "Change my receiving letter day",receiving_day_path, class:"btn-outline" %>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

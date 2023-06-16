@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "bird.png"%>
+      <%= image_tag "bird.png" %>
     <% end %>
 
       <div class="row justify-content-search">
@@ -13,7 +13,10 @@
                 class: "form-control custom-borders height-40",
                 placeholder: "Search a friend"
                 %>
-              <%= submit_tag "Search", name: "", class: "btn-search nav-search-button height-30" %>
+              <button type="submit" name="" class="btn-search gap-2 nav-search-button d-flex align-items-center height-30">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+              </button>
           <% end %>
         </div>
       </div>

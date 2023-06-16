@@ -4,7 +4,7 @@
   </h1>
 
   <%= simple_form_for(current_user, html_options: { novalidate: true }) do |f| %>
-    <div class="yellow-box p-5">
+    <div class="yellow-box shadow rounded-bottom-4 p-5">
       <div class="form_inputs">
         <%= f.input :receiving_day, as: :radio_buttons, label: false, include_hidden: false,
           collection: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
