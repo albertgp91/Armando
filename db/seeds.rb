@@ -8,6 +8,8 @@
 puts "cleaning DB..."
 Letter.destroy_all
 puts "Letters deleted"
+Friendship.destroy_all
+puts "Friendships deleted"
 User.destroy_all
 puts "Users deleted"
 randomizer = ('a'..'z').to_a

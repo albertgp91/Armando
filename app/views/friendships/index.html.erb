@@ -3,12 +3,27 @@
   <div class="col-6 bg-#fff3c9 mt-5">
     <div class="col justify-content-center">
       <h1 class="mb-3 letter_title text-center pb-3">Friends requests</h1>
-      <div class="card shadow p-5 letter-bg">
+      <div class="d-flex yellow-box no-bg shadow rounded-4 py-3 px-5 gap-3 flex-column">
         <% @received_friends.each do |friend|  %>
-          <li><%= friend.full_name %> - <%= friend.user_name %>
-            <%= link_to "Accept", accept_friendship_user_path(friend), data: { turbo_method: :patch } %>
-            <%= link_to 'Reject', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
-          </li>
+          <div class="py-2 px-4 rounded-4 shadow-sm text-bg-light d-flex flex-row flex-grow-1 justify-content-between align-items-center gap-2">
+            <div>
+              <%= user_avatar(friend, width: 100) %>
+              <%= friend.user_name %>
+            </div>
+            <div class="d-flex flex-row gap-3">
+              <%= link_to accept_friendship_user_path(friend), data: { turbo_method: :patch } do %>
+                <i class="fa-regular fa-2xl fa-circle-check text-success"></i>
+              <% end %>
+
+              <%= link_to delete_friendship_user_path(friend), data: { turbo_method: :delete } do %>
+                <i class="fa-regular fa-2xl fa-circle-xmark text-error"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @received_friends.size === 0 %>
+          <h3>No friend requests</h3>
         <% end %>
       </div>
     </div>
@@ -17,12 +32,27 @@
   <div class="col-6 mt-5">
     <div class="col justify-content-center">
       <h1 class="mb-3 letter_title text-center pb-3">Friend's list</h1>
-        <div class="card shadow p-5 letter-bg">
+      <div class="d-flex yellow-box no-bg shadow rounded-4 py-3 px-5 gap-3 flex-column">
           <% @friends.each do |friend|  %>
-            <li><%= friend.full_name %> - <%= friend.user_name %>
-              <%= link_to 'Remove', delete_friendship_user_path(friend), data: { turbo_method: :delete } %>
-            </li>
+            <div class="py-2 px-4 rounded-4 shadow-sm text-bg-light d-flex flex-row flex-grow-1 justify-content-between align-items-center gap-2">
+            <div>
+              <%= user_avatar(friend, width: 100) %>
+              <%= friend.user_name %>
+            </div>
+            <div class="d-flex flex-row gap-3">
+              <%= link_to accept_friendship_user_path(friend), data: { turbo_method: :patch } do %>
+                <i class="fa-regular fa-2xl fa-circle-check text-success"></i>
+              <% end %>
+
+              <%= link_to delete_friendship_user_path(friend), data: { turbo_method: :delete } do %>
+                <i class="fa-regular fa-2xl fa-circle-xmark text-error"></i>
+              <% end %>
+            </div>
+          </div>
           <% end  %>
+          <% if @friends.size === 0 %>
+            <h3>No friends</h3>
+          <% end %>
         </div>
     </div>
   </div>
