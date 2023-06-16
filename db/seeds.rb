@@ -17,7 +17,7 @@ user1 = User.create!(
   email: 'miguel@neverland.com',
   password: '123456',
   full_name: 'Miguelinho',
-  user_name: 'miguel',
+  user_name: 'theking',
   comkey: 1111,
 )
 file = URI.open("miguel.jpg")

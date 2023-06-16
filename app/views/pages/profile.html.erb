@@ -8,9 +8,9 @@
             <span class="hovertext" data-hover="Change your avatar">
               <%= link_to avatar_path do %>
                 <% if @user.avatar_file.present? %>
-                  <%= image_tag @user.avatar_file, class: "avatar" %>
+                  <%= image_tag @user.avatar_file,class: "avatar" %>
                 <% else %>
-                 <%= image_tag "profile_placeholde", class: "avatar" %>
+                 <%= image_tag "profile_placeholder", class: "avatar" %>
                 <% end %>
               <% end %>
             </span>
