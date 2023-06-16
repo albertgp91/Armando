@@ -1,20 +1,19 @@
 <div class="body-color">
 <div class="container pt-5" style="min-height: 100vh">
   <% if @users.present? %>
-    <h1 class="letter_title text-center">The friend you're looking for :</h1>
+    <h1 class="letter_title text-center">The friend you're looking for</h1>
     <div class="row justify-content-center pt-5">
       <% @users.each do |user| %>
         <div class="col-12 col-sm-6 col-md-4 mb-4">
           <%= link_to user_path(user), class: "text-decoration-none" do %>
             <div class="card h-100 shadow">
-              <%= image_tag "bird.png", height: 90 %>
-              <div class="card-body-friends text-center pb-3">
-                <p class="mt-2"><%= user.full_name %></p>
+               <div class="card-body-friends text-center pb-3">
                 <% if user.avatar_file.present? %>
-                  <%=image_tag current_user.avatar_file, height: 90, style: "width: 90px;", class: "avatar mt-3" %>
+                  <%=image_tag current_user.avatar_file, class: "avatar-user mt-3" %>
                 <% else %>
-                  <%= image_tag "profile_placeholder.jpg", height: 90, style: "width: 90px;", class: "avatar mt-3" %>
+                  <%= image_tag "profile_placeholder.jpg", class: "avatar-user mt-3 rounded-circle" %>
                 <% end %>
+                <p class="mt-2"><%= user.user_name %></p>
               </div>
             </div>
           <% end %>
