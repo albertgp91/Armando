@@ -30,6 +30,17 @@
 
 .benefit1 {
   height: 420px;
+  background-color: #FFFFFF;
+  padding-top: 0px;
+  font-family: 'Nunito', 'Helvetica', 'sans-serif';
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  color: $brand-color;
+}
+
+.benefit2 {
+  height: 420px;
   background-color: #f7a15b;
   padding-top: 0px;
   font-family: 'Nunito', 'Helvetica', 'sans-serif';
@@ -37,23 +48,12 @@
   display: flex;
   justify-content: space-between;
   color: #fdeed9;
-}
-
-.benefit2 {
-  height: 420px;
-  background-color: #fdeed9;
-  padding-top: 0px;
-  font-family: 'Nunito', 'Helvetica', 'sans-serif';
-  font-size: small;
-  display: flex;
-  justify-content: space-between;
-  color: #f7a15b;
   margin-left: 20px;
 }
 
 .benefit3 {
   height: 420px;
-  background-color: #f7a15b;
+  background-color: $brand-color;
   padding-top: 0px;
   font-family: 'Nunito', 'Helvetica', 'sans-serif';
   font-size: small;
@@ -64,13 +64,13 @@
 
 .benefit4 {
   height: 470px;
-  background-color: #fdeed9;
+  background-color: #fff3e1;
   padding-top: 0px;
   font-family: 'Nunito', 'Helvetica', 'sans-serif';
   font-size: medium;
   display: flex;
   justify-content: space-between;
-  color: #f7a15b;
+  color: $brand-color;
 }
 
 .footer {
